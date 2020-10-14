@@ -1,0 +1,14 @@
+{
+  "types": [
+    {"type":"feat","section":"New features"},
+    {"type":"fix","section":"Bugs fixed"},
+    {"type":"docs","section":"Documentations"},
+    {"type":"refactor","section":"Refactor"},
+    {"type":"test","section":"Test"},
+    {"type":"pref","section":"Optimizations"},
+    {"type":"revert","section":"Revert"},
+    {"type":"ci", "section":"CI & CD"},
+    {"type":"chore", "section":"Tools"}
+  ],
+  "preMajor": true
+}
