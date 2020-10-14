@@ -34,6 +34,10 @@
     | Docker                        |                                                              | ***推荐且优先实现***      |
     | Microsoft .NET SDK or Runtime |                                                              | ***非必要***              |
 
+- **架构设计 - Architecture**
+
+  <img src="./docs/DEP 架构设计.png" alt="架构设计" style="zoom:30%;" />
+
 - **文档 - Documentation**
 
   | 文档目录 Table Of Content                           |
