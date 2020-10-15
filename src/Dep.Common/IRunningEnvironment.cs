@@ -6,18 +6,18 @@
  *
  * Author:             Wang Yucai
  * Git Repository Url: https://github.com/netowls-studio/dep
- * Created Time:       2020/10/15 13:00:17
- * Code:               IDepContext.cs
+ * Created Time:       2020/10/15 13:28:47
+ * Code:               IRunningEnvironment.cs
  * ********************************************************************************************
  */
 
 namespace NetowlsStudio.Dep
 {
-    /// <summary> 定义了 DEP 的上下文信息接口。 </summary>
-    public interface IDepContext
+    /// <summary> 定义了 DEP 运行环境信息的接口。 </summary>
+    public interface IRunningEnvironment
     {
-        /// <summary> 当前的运行环境名称。 </summary>
-        /// <value> 获取一个字符串，用于表示当前的运行环境名称。 </value>
+        /// <summary> 运行环境名称。 </summary>
+        /// <value> 获取一个字符串，用于表示运行环境名称。 </value>
         string EnvironmentName { get; }
     }
 }
