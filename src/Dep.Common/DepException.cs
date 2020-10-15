@@ -67,13 +67,8 @@ namespace NetowlsStudio.Dep
         /// <exception cref="T:System.Text.RegularExpressions.RegexMatchTimeoutException"> </exception>
         private static string GetMessage(string message)
         {
-#if NET35
-            if (string.IsNullOrEmpty(message))
-                return DefaultMessage;
-#else
             if (string.IsNullOrWhiteSpace(message))
                 return DefaultMessage;
-#endif
             if (IsMatchTemplate(message))
                 return message;
             return string.Format(MessageTemplate, message);
