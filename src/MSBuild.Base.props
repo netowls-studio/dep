@@ -1,0 +1,34 @@
+﻿<Project>
+  <PropertyGroup>
+    <Version>1.0.0.0-alpha.1</Version>
+    <Authors>Wang Yucai</Authors>
+    <Product>DEP</Product>
+    <Description>"DEP" is an open source data exchange platform, or it should be called data exchange middleware. It is used to exchange dataset, files and etc. produced by different systems.</Description>
+    <Copyright>Copyright © 2006 - 2020 Wang Yucai. All rights reserved.</Copyright>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageProjectUrl>https://github.com/netowls-studio/dep</PackageProjectUrl>
+    <PackageIcon>Dep-128.png</PackageIcon>
+    <RepositoryUrl>https://github.com/netowls-studio/dep</RepositoryUrl>
+    <RepositoryType>git; github</RepositoryType>
+    <PackageTags>dotnet; dotnet-core; dotnet-framework; dotnet-standard; csharp; aspnet; aspnet-core</PackageTags>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>./bin/$(Configuration)/$(TargetFramework)/$(AssemblyName).xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>./bin/$(Configuration)/$(TargetFramework)/$(AssemblyName).xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\assets\Icons\Dep-128.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+    <None Include="..\..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+</Project>

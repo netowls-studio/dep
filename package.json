@@ -3,32 +3,32 @@
     "standard-version": "^9.0.0"
   },
   "author": {
-    "name" : "Wang Yucai",
+    "name": "Wang Yucai",
     "email": "netowls-studio@outlook.com"
   },
-  "name"       : "@netowls-studio/dotnet-dep",
+  "name": "@netowls-studio/dotnet-dep",
   "description": "'DEP' is an open source data exchange platform, or it should be called data exchange middleware. It is used to exchange dataset, files and etc. produced by different systems.",
   "displayName": "数据交换平台 - Data Exchange",
-  "homepage"   : "https://github.com/netowls-studio/dep",
-  "icon"       : "./assets/Icons/Dep-128.png",
-  "license"    : "MS-PL",
-  "markdown"   : "github",
-  "os"         : [
+  "homepage": "https://github.com/netowls-studio/dep",
+  "icon": "./assets/Icons/Dep-128.png",
+  "license": "MS-PL",
+  "markdown": "github",
+  "os": [
     "windows",
     "linux"
   ],
-  "readme"    : "./README.md",
+  "readme": "./README.md",
   "repository": {
     "type": "Github",
-    "url" : "https://github.com/netowls-studio/dep"
+    "url": "https://github.com/netowls-studio/dep"
   },
   "scripts": {
-    "alpha-dryrun"  : "standard-version -p alpha -i CHANGELOG.md --dry-run",
-    "alpha"         : "standard-version -p alpha -i CHANGELOG.md",
-    "pre-dryrun"    : "standard-version -p preview -i CHANGELOG.md --dry-run",
-    "pre"           : "standard-version -p preview -i CHANGELOG.md",
+    "alpha-dryrun": "standard-version -p alpha -i CHANGELOG.md --dry-run",
+    "alpha": "standard-version -p alpha -i CHANGELOG.md",
+    "pre-dryrun": "standard-version -p preview -i CHANGELOG.md --dry-run",
+    "pre": "standard-version -p preview -i CHANGELOG.md",
     "release-dryrun": "standard-version -i CHANGELOG.md --dry-run",
-    "release"       : "standard-version -i CHANGELOG.md"
+    "release": "standard-version -i CHANGELOG.md"
   },
-  "version": "1.0.0-alpha.0"
+  "version": "1.0.0-alpha.1"
 }
