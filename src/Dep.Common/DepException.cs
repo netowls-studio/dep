@@ -64,7 +64,7 @@ namespace NetowlsStudio.Dep
         /// <summary> 获取异常信息。 </summary>
         /// <param name="message"> 异常信息。 </param>
         /// <returns> 异常信息。 </returns>
-        /// <exception cref="RegexMatchTimeoutException"> </exception>
+        /// <exception cref="T:System.Text.RegularExpressions.RegexMatchTimeoutException"> </exception>
         private static string GetMessage(string message)
         {
 #if NET35
@@ -82,7 +82,7 @@ namespace NetowlsStudio.Dep
         /// <summary> 用于校验异常信息是否满足指定格式。 </summary>
         /// <param name="message"> 异常信息。 </param>
         /// <returns> 如果满足，则返回 <c> true </c>；否则返回 <c> false </c>。 </returns>
-        /// <exception cref="RegexMatchTimeoutException"> </exception>
+        /// <exception cref="T:System.Text.RegularExpressions.RegexMatchTimeoutException"> </exception>
         private static bool IsMatchTemplate(string message)
         {
             const string pattern = @"^[Dd][Ee][Pp]\s异常：";
