@@ -32,9 +32,9 @@
     | --------------------------------------------------- | ------------------------------------------------------------ |
     | Dep.Messaging.Abstractions                          | 通信消息抽象。                                               |
     | Dep.Messaging.RabbitMQ                              | RabbitMQ 通信消息实现。                                      |
-  | Dep.Messaging.Http                                  | RESTful 通信消息实现。                                       |
+    | Dep.Messaging.Http                                  | RESTful 通信消息实现。                                       |
     | Dep.AspNetCore.SwaggerDocumentation                 | DEP ASP.NET Core 接口说明文档配置。                          |
-  | Dep.Server.Membership                               | DEP 服务成员信息。                                           |
+    | Dep.Server.Membership                               | DEP 服务成员信息。                                           |
     | Dep.Server.Membership.Persistence.Abstractions      | DEP 服务成员信息数据持久化抽象。                             |
     | Dep.Server.Membership.Persistence.Locale            | DEP 服务成员信息本地持久化实现（基于 **[LiteDB](https://www.nuget.org/packages/LiteDB/)**）。 |
     | Dep.Server.Membership.Configuration                 | DEP 服务配置。                                               |
