@@ -1,0 +1,18 @@
+{
+  "Dep": {
+    "RabbitMQ": {
+      "Servers": [
+        {
+          "Name": "",
+          "HostName": "",
+          "Credentials": {
+            "UserName": "",
+            "Password": ""
+          },
+          "Enabled": true
+        }
+      ],
+      "DefaultServer": ""
+    }
+  }
+}
