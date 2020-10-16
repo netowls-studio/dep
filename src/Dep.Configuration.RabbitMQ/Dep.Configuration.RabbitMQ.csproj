@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>NetowlsStudio.Dep.Configuration.RabbitMQ</AssemblyName>
+    <RootNamespace>NetowlsStudio.Dep.Configuration</RootNamespace>
+  </PropertyGroup>
+
+  <Import Project="../MSBuild.Base.props" />
+  <Import Project="../MSBuild.NuGet.props" />
+  <ItemGroup>
+    <ProjectReference Include="..\Dep.Common\Dep.Common.csproj" />
+  </ItemGroup>
+
+</Project>

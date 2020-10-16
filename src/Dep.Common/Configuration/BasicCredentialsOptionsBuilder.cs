@@ -31,11 +31,7 @@ namespace NetowlsStudio.Dep.Configuration
         /// <seealso cref="BasicCredentialsOptions" />
         public virtual BasicCredentialsOptions Build()
         {
-            return new BasicCredentialsOptions
-            {
-                Password = Password,
-                UserName = UserName
-            };
+            return new BasicCredentialsOptions(UserName, Password);
         }
 
         /// <summary> 设置口令。 </summary>
