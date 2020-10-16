@@ -31,6 +31,7 @@
     | 项目名称                                            | 说明                                                         |
     | --------------------------------------------------- | ------------------------------------------------------------ |
     | Dep.Messaging.Abstractions                          | 通信消息抽象。                                               |
+    | Dep.Configuration.RabbitMQ                          | DEP RabbitMQ 通信配置。                                      |
     | Dep.Messaging.RabbitMQ                              | RabbitMQ 通信消息实现。                                      |
     | Dep.Messaging.Http                                  | RESTful 通信消息实现。                                       |
     | Dep.AspNetCore.SwaggerDocumentation                 | DEP ASP.NET Core 接口说明文档配置。                          |
