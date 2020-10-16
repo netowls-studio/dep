@@ -14,7 +14,8 @@
 namespace NetowlsStudio.Dep.Configuration
 {
     /// <summary> 提供了用户名、口令基础身份认证凭据相关的配置信息。 </summary>
-    public class BasicCredentialsOptions
+    /// <seealso cref="IDepOptions" />
+    public class BasicCredentialsOptions : IDepOptions
     {
         /// <summary> 用于初始化一个 <see cref="BasicCredentialsOptions" /> 类型的对象实例。 </summary>
         public BasicCredentialsOptions()
