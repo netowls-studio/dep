@@ -35,8 +35,8 @@ namespace NetowlsStudio.Dep.Configuration
         /// <value> 设置或获取一个字符串，用于表示 RabbitMQ 服务器命名。 </value>
         protected virtual string Name { get; set; } = "";
 
-        /// <summary> 构建 <see cref="RabbitMQServerOptions"/> 类型的对象实例。 </summary>
-        /// <returns> <see cref="RabbitMQServerOptions"/> 类型的对象实例。 </returns>
+        /// <summary> 构建 <see cref="RabbitMQServerOptions" /> 类型的对象实例。 </summary>
+        /// <returns> <see cref="RabbitMQServerOptions" /> 类型的对象实例。 </returns>
         public RabbitMQServerOptions Build() => new RabbitMQServerOptions(Name, HostName, Credentials, Enabled);
 
         /// <summary> 设置 RabbitMQ 身份认证凭据。 </summary>
@@ -55,11 +55,13 @@ namespace NetowlsStudio.Dep.Configuration
         /// <summary> 设置 RabbitMQ 身份认证凭据。 </summary>
         /// <param name="credentialsBuilder">
         /// 构建身份认证凭据的程序。
-        /// <para> <see cref="BasicCredentialsOptionsBuilder" /> 类型的对象实例。 </para>
+        /// <para> 实现了 <see cref="IObjectBuilder{T}" /> 类型接口的对象实例。 </para>
         /// </param>
         /// <returns> <see cref="RabbitMQServerOptionsBuilder" /> 类型的对象实例。 </returns>
+        /// <seealso cref="IObjectBuilder{T}" />
+        /// <seealso cref="BasicCredentialsOptions" />
         /// <seealso cref="BasicCredentialsOptionsBuilder" />
-        public virtual RabbitMQServerOptionsBuilder WithCredentialsBuilder(BasicCredentialsOptionsBuilder credentialsBuilder)
+        public virtual RabbitMQServerOptionsBuilder WithCredentialsBuilder(IObjectBuilder<BasicCredentialsOptions> credentialsBuilder)
             => WithCredentials(credentialsBuilder.Build());
 
         /// <summary> 设置禁用当前的 RabbitMQ 主机。 </summary>

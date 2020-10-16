@@ -6,3 +6,4 @@
 using System.Diagnostics.CodeAnalysis;
 
 [assembly: SuppressMessage("Microsoft.Design", "ExceptionThrownInSetter:Unhandled exception(s)", Justification = "<挂起>", Scope = "member", Target = "~P:NetowlsStudio.Dep.Configuration.RabbitMQServerOptions.Name")]
+[assembly: SuppressMessage("Microsoft.Design", "ExceptionThrownInSetter:Unhandled exception(s)", Justification = "<挂起>", Scope = "member", Target = "~P:NetowlsStudio.Dep.Configuration.RabbitMQOptions.DefaultServer")]
