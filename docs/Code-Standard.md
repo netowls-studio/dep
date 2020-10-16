@@ -31,6 +31,7 @@
     | 项目名称                                            | 说明                                                         |
     | --------------------------------------------------- | ------------------------------------------------------------ |
     | Dep.Messaging.Abstractions                          | 通信消息抽象。                                               |
+    | Dep.Configuration.RabbitMQ                          | DEP RabbitMQ 通信配置。                                      |
     | Dep.Messaging.RabbitMQ                              | RabbitMQ 通信消息实现。                                      |
     | Dep.Messaging.Http                                  | RESTful 通信消息实现。                                       |
     | Dep.AspNetCore.SwaggerDocumentation                 | DEP ASP.NET Core 接口说明文档配置。                          |
@@ -103,6 +104,21 @@
   | **{root-path}**/server/cluster-members/#{hash-sign} | DEP 服务群集节点。                        |
   | **{root-path}**/server/devops/#{hash-sign}          | DEP 运维相关信息节点。                    |
   | **{root-path}**/client-registry/#{hash-sign}        | DEP 客户端（**Watcher & Agent**）注册表。 |
+  
+- **通信渠道 Communicate Mode**
+
+  - **RabbitMQ**
+
+    | 类型        | 模板                                                    | 说明                                                         |
+    | ----------- | ------------------------------------------------------- | ------------------------------------------------------------ |
+    | Exchange    | dep-exchange.topic.journal                              | DEP 服务器内部行为交换机。                                   |
+    | Routing-Key | dep-journal.#{**mode: normal/receipt/dead-letter/cmd**} | DEP 服务器内部行为路由标识。**Normal**: 正常的消息；**Receipt**: 回执消息；**Dead-Letter**: 死信消息；**CMD (Command)**: 维护性命令消息。 |
+    | Queue       | dep-queue.normal                                        | 正常消息队列。                                               |
+    | Queue       | dep-queue.receipt                                       | 回执消息队列。                                               |
+    | Queue       | dep-queue.dead-letter                                   | 私信消息队列。                                               |
+    | Queue       | dep-queue.cmd                                           | 维护命令消息队列。                                           |
+
+    
 
 
 

@@ -6,6 +6,6 @@
     <RootNamespace>NetowlsStudio.Dep</RootNamespace>
   </PropertyGroup>
 
-  <Import Project="../MSBuild.Base.props"/>
-  <Import Project="../MSBuild.NuGet.props"/>
+  <Import Project="../MSBuild.Base.props" />
+  <Import Project="../MSBuild.NuGet.props" />
 </Project>

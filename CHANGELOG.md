@@ -2,6 +2,29 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.0-alpha.2](https://github.com/netowls-studio/dep/compare/v1.0.0-alpha.1...v1.0.0-alpha.2) (2020-10-16)
+
+
+### Refactor
+
+* 调整 DEP 上下文接口 IDepContext。 ([c17ab3b](https://github.com/netowls-studio/dep/commit/c17ab3b256649e07b122266570fe7720d8fb84f8))
+
+
+### Documentations
+
+* 修改了代码规范文档。 ([f172ccf](https://github.com/netowls-studio/dep/commit/f172ccfc694dbb7dc99387260fb38d20baffd9a8))
+* 修改了代码规范文档。 ([a11305f](https://github.com/netowls-studio/dep/commit/a11305f8c4eb88e6f681ed8f8a3132bbc190fb6f))
+
+
+### New features
+
+* 调整了 RabbitMQServerOptionsBuilder 类型的 WithCredentialsBuilder 方法参数。 ([eadc194](https://github.com/netowls-studio/dep/commit/eadc1947fc377240d20d78340a1c84dbbb8ae4da))
+* 新增 DEP 配置项标记接口。 ([45c0600](https://github.com/netowls-studio/dep/commit/45c0600a582f414d84e343d5de34143d59221481))
+* 新增 RabbitMQ 配置 RabbitMQOptions。 ([410b701](https://github.com/netowls-studio/dep/commit/410b70122da8445a97c4be39cdd16d100ec638d3))
+* 新增 RabbitMQ 通信配置 RabbitMQServerOptions。 ([797c1e4](https://github.com/netowls-studio/dep/commit/797c1e44d51ae3fe6d01ee0f6f1376069eed9add))
+* 新增构建器模式接口 IObjectBuilder。 ([649c337](https://github.com/netowls-studio/dep/commit/649c337f1a893f7c6b9046b9f96e90aa998bad0f))
+* 新增基础身份认证凭据配置类 BasicCredentialsOptions。 ([ae23e6a](https://github.com/netowls-studio/dep/commit/ae23e6a3fb2437900cf7d75eb7540f6cc672fc67))
+
 ## 1.0.0-alpha.1 (2020-10-15)
 
 
