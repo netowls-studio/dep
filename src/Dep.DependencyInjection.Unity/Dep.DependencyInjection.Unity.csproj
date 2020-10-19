@@ -11,5 +11,8 @@
   <ItemGroup>
     <PackageReference Include="Unity" Version="5.11.7" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Dep.Common\Dep.Common.csproj" />
+  </ItemGroup>
 
 </Project>
