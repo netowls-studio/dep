@@ -9,7 +9,7 @@
     | 项目名称                                 | 说明                                                |
     | ---------------------------------------- | --------------------------------------------------- |
     | Dep.Common                               | 公共接口、类型、扩展方法等。                        |
-    | Dep.Core                                 | 公共核心接口基本实现。                              |
+    | ~~Dep.Core~~                             | ~~公共核心接口基本实现。~~                          |
     | Dep.Core.DependencyInjection             | 基于 .NET Core 服务依赖注入实现。                   |
     | Dep.Core.DependencyInjection.Unity       | 用于保持兼容性的基于 Microsoft Unity 依赖注入实现。 |
     | Dep.Runtime.Logging.Abstractions         | 运行时日志抽象日志接口。                            |
