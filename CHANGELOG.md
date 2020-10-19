@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.0-alpha.4](https://github.com/netowls-studio/dep/compare/v1.0.0-alpha.3...v1.0.0-alpha.4) (2020-10-19)
+
+
+### New features
+
+* 调整了 AddDepServices 方法，增加了 IDepContext 服务注册。 ([a09b0da](https://github.com/netowls-studio/dep/commit/a09b0da372c8cb51afb9683273ac48719e98dfb5))
+* 新增 DEP 提供的默认 Unity IoC 容器。 ([fdb2465](https://github.com/netowls-studio/dep/commit/fdb2465e92eca579419200326768d7f710120010))
+* 新增基于 Microsoft Unity 的依赖注入扩展方法。 ([e48cdd3](https://github.com/netowls-studio/dep/commit/e48cdd3dd63313f9cb02843c2cf0e3d540e534b4))
+* 新增配置默认值类。 ([af2b1be](https://github.com/netowls-studio/dep/commit/af2b1beac93deb203d31e64425dea3c06fea6a30))
+
 ## [1.0.0-alpha.3](https://github.com/netowls-studio/dep/compare/v1.0.0-alpha.2...v1.0.0-alpha.3) (2020-10-19)
 
 
