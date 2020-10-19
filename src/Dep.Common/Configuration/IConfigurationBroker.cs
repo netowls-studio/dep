@@ -19,6 +19,10 @@ namespace NetowlsStudio.Dep.Configuration
     public interface IConfigurationBroker<TOptions>
         where TOptions : class, IDepOptions
     {
+        /// <summary> 配置变更事件。 </summary>
+        /// <seealso cref="ConfigurationChangedEventHandler" />
+        event ConfigurationChangedEventHandler ConfigurationChanged;
+
         /// <summary> 获取配置信息。 </summary>
         /// <returns> 实现了 <see cref="IDepOptions" /> 类型接口的对象实例。 </returns>
         TOptions Get();

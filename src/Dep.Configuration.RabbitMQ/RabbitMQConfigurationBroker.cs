@@ -17,14 +17,16 @@ namespace NetowlsStudio.Dep.Configuration
 {
     /// <summary> 提供了访问 RabbitMQ 配置相关的方法。 </summary>
     /// <seealso cref="IConfigurationBroker{TOptions}" />
+    /// <seealso cref="ConfigurationBroker{TOptions}" />
     /// <seealso cref="RabbitMQOptions" />
-    public class RabbitMQConfigurationBroker : IConfigurationBroker<RabbitMQOptions>
+    public class RabbitMQConfigurationBroker : ConfigurationBroker<RabbitMQOptions>, IConfigurationBroker<RabbitMQOptions>
     {
         /// <summary> 用于初始化一个 <see cref="RabbitMQConfigurationBroker" /> 类型的对象实例。 </summary>
         /// <param name="optionsMonitor"> 实现了 <see cref="IOptionsMonitor{TOptions}" /> 类型接口的对象实例。 </param>
         public RabbitMQConfigurationBroker(IOptionsMonitor<RabbitMQOptions> optionsMonitor)
         {
             RabbitMQOptionsMonitor = optionsMonitor;
+            optionsMonitor.OnChange(options => OnConfigurationChanged(options));
         }
 
         /// <summary> RabbitMQ 配置。 </summary>
@@ -40,6 +42,6 @@ namespace NetowlsStudio.Dep.Configuration
 
         /// <summary> 获取 RabbitMQ 配置信息。 </summary>
         /// <returns> <see cref="RabbitMQOptions" /> 类型的对象实例。 </returns>
-        public virtual RabbitMQOptions Get() => RabbitMQOptionsMonitor.CurrentValue;
+        public override RabbitMQOptions Get() => RabbitMQOptionsMonitor.CurrentValue;
     }
 }

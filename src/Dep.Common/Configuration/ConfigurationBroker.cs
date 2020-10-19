@@ -20,6 +20,10 @@ namespace NetowlsStudio.Dep.Configuration
     public abstract class ConfigurationBroker<TOptions> : IConfigurationBroker<TOptions>
         where TOptions : class, IDepOptions
     {
+        /// <summary> 配置变更事件。 </summary>
+        /// <seealso cref="ConfigurationChangedEventHandler" />
+        public event ConfigurationChangedEventHandler ConfigurationChanged;
+
         /// <summary> 获取配置信息。 </summary>
         /// <returns> 实现了 <see cref="IDepOptions" /> 类型接口的对象实例。 </returns>
         TOptions IConfigurationBroker<TOptions>.Get() => Get();
@@ -27,5 +31,13 @@ namespace NetowlsStudio.Dep.Configuration
         /// <summary> 获取配置信息。 </summary>
         /// <returns> 实现了 <see cref="IDepOptions" /> 类型接口的对象实例。 </returns>
         public abstract TOptions Get();
+
+        /// <summary> 用于引发 <see cref="ConfigurationChanged" /> 事件。 </summary>
+        /// <param name="changedOptions"> 变更的 <see cref="IDepOptions" /> 类型的对象实例。 </param>
+        /// <seealso cref="IDepOptions" />
+        protected virtual void OnConfigurationChanged(IDepOptions changedOptions)
+        {
+            ConfigurationChanged?.Invoke(this, new ConfigurationChangedEventArgs(changedOptions));
+        }
     }
 }
