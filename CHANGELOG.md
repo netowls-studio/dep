@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.0-alpha.3](https://github.com/netowls-studio/dep/compare/v1.0.0-alpha.2...v1.0.0-alpha.3) (2020-10-19)
+
+
+### Documentations
+
+* 新增 NuGet 包依赖说明文档。 ([0a4ee4e](https://github.com/netowls-studio/dep/commit/0a4ee4e0d4c29dc74e9cbc2f0dcd4163fae299f3))
+* 修改了 NuGet 包依赖说明文档格式。 ([7a01942](https://github.com/netowls-studio/dep/commit/7a019429855caaa914aaecf58373be2efaa814b1))
+* 修改了代码规范文档 Code-Standard.md ([36656f6](https://github.com/netowls-studio/dep/commit/36656f6ab7459670ac404837a6e6525a81616d44))
+
+
+### New features
+
+* 为 RabbitMQOptions 类型添加了 Path 常量，便于访问配置路径。 ([c46d058](https://github.com/netowls-studio/dep/commit/c46d058636634cf226b5a7ad07f5ebe6a1957a5f))
+* 为接口 IConfigurationBroker 新增捕获配置变更的事件。 ([b118823](https://github.com/netowls-studio/dep/commit/b118823eb4ed0726a0b13754b7030051778527cb))
+* 新增 Microsoft .NET Core 依赖注入扩展。 ([dddbb5d](https://github.com/netowls-studio/dep/commit/dddbb5d5636c0d3b25e25ac1db05a0016028479a))
+* 新增 RabbitMQ 配置访问程序 RabbitMQConfigurationBroker。 ([3ad5128](https://github.com/netowls-studio/dep/commit/3ad5128bf62bd9e07ce8194ab93e761c8e49878c))
+* 新增 RabbitMQ 配置服务依赖注入扩展方法。 ([689b1eb](https://github.com/netowls-studio/dep/commit/689b1eb834ccde393d97402e111dbb83293c44ff))
+* 新增访问配置信息的接口 IConfigurationBroker。 ([5fe1796](https://github.com/netowls-studio/dep/commit/5fe1796fbc05fc8bccc863bc5fc68618ffcd26f8))
+
 ## [1.0.0-alpha.2](https://github.com/netowls-studio/dep/compare/v1.0.0-alpha.1...v1.0.0-alpha.2) (2020-10-16)
 
 

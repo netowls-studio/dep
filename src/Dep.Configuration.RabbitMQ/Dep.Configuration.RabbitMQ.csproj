@@ -10,6 +10,7 @@
   <Import Project="../MSBuild.NuGet.props" />
   <ItemGroup>
     <ProjectReference Include="..\Dep.Common\Dep.Common.csproj" />
+    <ProjectReference Include="..\Dep.DependencyInjection\Dep.DependencyInjection.csproj" />
   </ItemGroup>
 
 </Project>

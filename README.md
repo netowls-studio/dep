@@ -40,11 +40,12 @@
 
 - **文档 - Documentation**
 
-  | 文档目录 Table Of Content                           |
-  | --------------------------------------------------- |
-  | [代码变更日志 - Change Log](./CHANGELOG.md)         |
-  | [构建状态 - Build State](./docs/Build-Status.md)    |
-  | [代码约定 - Code Standard](./docs/Code-Standard.md) |
+  | 文档目录 Table Of Content                                    |
+  | ------------------------------------------------------------ |
+  | [代码变更日志 - Change Log](./CHANGELOG.md)                  |
+  | [构建状态 - Build State](./docs/Build-Status.md)             |
+  | [代码约定 - Code Standard](./docs/Code-Standard.md)          |
+  | [NuGet 包依赖 - NuGet Package Dependency](./docs/NuPackage-Dependency.md) |
 
 - **协议 - License**
 

@@ -9,9 +9,9 @@
     | 项目名称                                 | 说明                                                |
     | ---------------------------------------- | --------------------------------------------------- |
     | Dep.Common                               | 公共接口、类型、扩展方法等。                        |
-    | Dep.Core                                 | 公共核心接口基本实现。                              |
-    | Dep.Core.DependencyInjection             | 基于 .NET Core 服务依赖注入实现。                   |
-    | Dep.Core.DependencyInjection.Unity       | 用于保持兼容性的基于 Microsoft Unity 依赖注入实现。 |
+    | ~~Dep.Core~~                             | ~~公共核心接口基本实现。~~                          |
+    | Dep.DependencyInjection                  | 基于 .NET Core 服务依赖注入实现。                   |
+    | Dep.DependencyInjection.Unity            | 用于保持兼容性的基于 Microsoft Unity 依赖注入实现。 |
     | Dep.Runtime.Logging.Abstractions         | 运行时日志抽象日志接口。                            |
     | Dep.Runtime.Logging.Providers.NLog       | 基于 NLog 的运行时日志实现。                        |
     | Dep.Runtime.Logging.Providers.DI         | 运行时日志服务（所有）依赖注入。                    |

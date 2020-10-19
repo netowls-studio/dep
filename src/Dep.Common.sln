@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dep.Common", "Dep.Common\De
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dep.Configuration.RabbitMQ", "Dep.Configuration.RabbitMQ\Dep.Configuration.RabbitMQ.csproj", "{C74AE955-2F8D-4BA9-9295-0AD94FFC84CE}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dep.DependencyInjection", "Dep.DependencyInjection\Dep.DependencyInjection.csproj", "{691CDCDF-5F5E-4654-A97B-8E6E39FD77CC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{C74AE955-2F8D-4BA9-9295-0AD94FFC84CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C74AE955-2F8D-4BA9-9295-0AD94FFC84CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C74AE955-2F8D-4BA9-9295-0AD94FFC84CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{691CDCDF-5F5E-4654-A97B-8E6E39FD77CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{691CDCDF-5F5E-4654-A97B-8E6E39FD77CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{691CDCDF-5F5E-4654-A97B-8E6E39FD77CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{691CDCDF-5F5E-4654-A97B-8E6E39FD77CC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
