@@ -20,6 +20,9 @@ namespace NetowlsStudio.Dep.Configuration
     /// <seealso cref="IDepOptions" />
     public class RabbitMQOptions : IDepOptions
     {
+        /// <summary> 配置路径。 </summary>
+        public const string Path = "Dep:RabbitMQ";
+
         private string m_defaultServerName;
 
         /// <summary> 用于初始化一个 <see cref="RabbitMQOptions" /> 类型的对象实例。 </summary>
