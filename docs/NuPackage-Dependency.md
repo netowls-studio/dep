@@ -14,3 +14,11 @@
 
 [NuGet]: https://www.nuget.org	"NuGet Official Site"
 
+
+
+----
+
+![DEP](../assets/Icons/Dep-64.png)
+
+
+
