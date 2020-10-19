@@ -27,7 +27,6 @@ namespace NetowlsStudio.Dep.Configuration
         /// <param name="configPath"> 配置路径。 </param>
         /// <seealso cref="IServiceCollection" />
         /// <seealso cref="IConfiguration" />
-        /// <seealso cref="Action{T1, T2}" />
         public static void AddDepOptions<TOptions>(this IServiceCollection services,
                                                    IConfiguration configuration,
                                                    string configPath = "Dep")
@@ -43,12 +42,11 @@ namespace NetowlsStudio.Dep.Configuration
         /// <typeparam name="TOptions"> 实现了 <see cref="IDepOptions" /> 接口的类型。 </typeparam>
         /// <typeparam name="TBroker"> 实现了 <see cref="IConfigurationBroker{TOptions}" /> 接口的类型。 </typeparam>
         /// <param name="services"> 实现了 <see cref="IServiceCollection" /> 类型接口的对象实例。 </param>
-        /// <param name="broker"> 实现了 <see cref="IConfigurationBroker{TOptions}" /> 类型接口的对象实例。 </param>
         /// <seealso cref="IServiceCollection" />
         /// <seealso cref="IDepOptions" />
         /// <seealso cref="IConfigurationBroker{TOptions}" />
-        public static void AddSingletonBroker<TOptions, TBroker>(this IServiceCollection services, TBroker broker)
+        public static void AddSingletonBroker<TOptions, TBroker>(this IServiceCollection services)
             where TOptions : class, IDepOptions
-            where TBroker : class, IConfigurationBroker<TOptions> => services.AddSingleton(broker);
+            where TBroker : class, IConfigurationBroker<TOptions> => services.AddSingleton<TBroker>();
     }
 }
