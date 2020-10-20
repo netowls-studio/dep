@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.0-alpha.5](https://github.com/netowls-studio/dep/compare/v1.0.0-alpha.4...v1.0.0-alpha.5) (2020-10-20)
+
+
+### New features
+
+* 新增 LogWriter 集合。 ([33f3f79](https://github.com/netowls-studio/dep/commit/33f3f790f2564bd473ff8c546d722d3a27748ab0))
+* 新增基于 .NET 诊断器记录运行时日志的方法 TraceListenerWriter。 ([8e0fc4a](https://github.com/netowls-studio/dep/commit/8e0fc4ab712b5ab2cd3adff99b8d9f580a4b6510))
+* 新增基于 EnterpriseLibrary 企业库的访问配置信息的方法。 ([7528b17](https://github.com/netowls-studio/dep/commit/7528b17f10f56707248d5b44cdc7cddddf76aa0b))
+* 新增记录运行时日志的接口 ILogWriter。 ([372e646](https://github.com/netowls-studio/dep/commit/372e646667e5652d31a0b276d6e9f2b725058540))
+* 新增记录运行时日志的入口方法 LogWriter。 ([6c9396d](https://github.com/netowls-studio/dep/commit/6c9396de8c89705911e5a301c0d23bb36e79471d))
+* 新增配置服务依赖注入扩展方法 UnityContainerExtensions.Configuration ([23ba0e2](https://github.com/netowls-studio/dep/commit/23ba0e21bd74e262b48b2306ecb6e844bce795b2))
+* 新增日志项类型枚举 LogEntryTypes。 ([5b758de](https://github.com/netowls-studio/dep/commit/5b758defe42c9a33a62c80f1814bba0f133b4b9c))
+
 ## [1.0.0-alpha.4](https://github.com/netowls-studio/dep/compare/v1.0.0-alpha.3...v1.0.0-alpha.4) (2020-10-19)
 
 
