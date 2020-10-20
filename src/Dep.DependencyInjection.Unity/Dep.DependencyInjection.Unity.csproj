@@ -9,6 +9,7 @@
   <Import Project="../MSBuild.Base.props" />
   <Import Project="../MSBuild.NuGet.props" />
   <ItemGroup>
+    <PackageReference Include="EnterpriseLibrary.Common.NetCore" Version="6.3.0" />
     <PackageReference Include="Unity" Version="5.11.7" />
   </ItemGroup>
   <ItemGroup>
