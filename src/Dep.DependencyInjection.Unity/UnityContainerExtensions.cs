@@ -14,7 +14,6 @@
 using System;
 using Unity;
 using Unity.Injection;
-using Unity.Lifetime;
 
 namespace NetowlsStudio.Dep.Unity
 {
@@ -30,7 +29,7 @@ namespace NetowlsStudio.Dep.Unity
         /// <seealso cref="Action{T}" />
         public static IUnityContainer AddDepServices(this IUnityContainer container, string envName, Action<IUnityContainer> configure)
         {
-            container.RegisterType<IDepContext, DepContext>(new SingletonLifetimeManager(), new InjectionConstructor(new RunningEnvironment(envName)));
+            container.RegisterSingleton<IDepContext, DepContext>(new InjectionConstructor(new RunningEnvironment(envName)));
             configure?.Invoke(container);
             return container;
         }

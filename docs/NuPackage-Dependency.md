@@ -9,7 +9,8 @@
 | >= [Microsoft.Extensions.Hosting.Abstractions](https://www.nuget.org/packages/Microsoft.Extensions.Hosting.Abstractions/3.1.9) 3.1.9 |
 | >= [Microsoft.Extensions.Configuration.Binder](https://www.nuget.org/packages/Microsoft.Extensions.Configuration.Binder/3.1.9) 3.1.9 |
 | >= [Microsoft.Extensions.Options](https://www.nuget.org/packages/Microsoft.Extensions.Options/3.1.9) 3.1.9 |
-| >= Microsoft [Unity](https://www.nuget.org/packages/Unity/5.11.7) >= 5.11.7 |
+| >= Microsoft [Unity](https://www.nuget.org/packages/Unity/5.11.7) 5.11.7 |
+| >= [EnterpriseLibrary.Common.NetCore](https://www.nuget.org/packages/EnterpriseLibrary.Common.NetCore/6.3.0) 6.3.0 |
 
 
 

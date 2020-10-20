@@ -6,10 +6,6 @@
     <RootNamespace>NetowlsStudio.Dep</RootNamespace>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Folder Include="Runtime\" />
-  </ItemGroup>
-
   <Import Project="../MSBuild.Base.props" />
   <Import Project="../MSBuild.NuGet.props" />
 </Project>
