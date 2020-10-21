@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.0-alpha.6](https://github.com/netowls-studio/dep/compare/v1.0.0-alpha.5...v1.0.0-alpha.6) (2020-10-21)
+
+
+### ⚠ BREAKING CHANGES
+
+* feat: 修改了 Dep.Runtime.Logging.DI.csproj 项目的程序集名称。
+
+### New features
+
+* 新增初始化 NLog 日志服务的接口 INLogConfigurationSetup。 ([ad0eff3](https://github.com/netowls-studio/dep/commit/ad0eff3f24ef9cff1c34cf660602554698b5a7f8))
+* 新增基于 NLog 记录运行时日志的相关方法。 ([6423593](https://github.com/netowls-studio/dep/commit/6423593116d315dc693054c837eed2ec16b3007a))
+* 新增基于 Unity 的日志服务依赖注入项目。 ([7729300](https://github.com/netowls-studio/dep/commit/7729300f7ebf5de471501b8983a00a7733c0ff63))
+* 新增日志服务依赖注入程序。 ([145772a](https://github.com/netowls-studio/dep/commit/145772a80006ae4e4f3f5babed19dd6c4b9c092d))
+* 新增一组 NLog 配置文件。 ([0221d3b](https://github.com/netowls-studio/dep/commit/0221d3b1198da91ba0132b775f3e1f11a7c859f9))
+* 修改了 ConfigurationDefaults.StorageFolderName 常量值。 ([706bb6b](https://github.com/netowls-studio/dep/commit/706bb6be1074b2e1f5a09c6748e7ba445bd6176f))
+* 修改了 Dep.Runtime.Logging.DI.csproj 项目的程序集名称。 ([79ac22a](https://github.com/netowls-studio/dep/commit/79ac22ab31df12b130d4fd3aedcc559c6895b8de))
+
 ## [1.0.0-alpha.5](https://github.com/netowls-studio/dep/compare/v1.0.0-alpha.4...v1.0.0-alpha.5) (2020-10-20)
 
 

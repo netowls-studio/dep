@@ -20,7 +20,7 @@ namespace NetowlsStudio.Dep.Configuration
     public static class ConfigurationDefaults
     {
         /// <summary> 配置文件存放文件夹名称。 </summary>
-        public const string StorageFolderName = "app_data";
+        public const string StorageFolderName = "App_Config";
 
         /// <summary>
         /// 配置文件存放路径。
