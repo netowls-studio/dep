@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>NetowlsStudio.Dep.Runtime.Logging.DependencyInjection</AssemblyName>
+    <RootNamespace>NetowlsStudio.Dep.DependencyInjection</RootNamespace>
+  </PropertyGroup>
+
+  <Import Project="../MSBuild.Base.props" />
+  <Import Project="../MSBuild.NuGet.props" />
+  <ItemGroup>
+    <ProjectReference Include="..\Dep.DependencyInjection\Dep.DependencyInjection.csproj" />
+    <ProjectReference Include="..\Dep.Runtime.Logging.Abstractions\Dep.Runtime.Logging.Abstractions.csproj" />
+    <ProjectReference Include="..\Dep.Runtime.Logging.Providers.NLog\Dep.Runtime.Logging.Providers.NLog.csproj" />
+  </ItemGroup>
+
+</Project>
