@@ -11,6 +11,7 @@
  * ********************************************************************************************
  */
 
+using NetowlsStudio.Dep.Runtime.Logging.Providers.Configuration;
 using NLog;
 using System;
 
@@ -29,6 +30,14 @@ namespace NetowlsStudio.Dep.Runtime.Logging.Providers
         /// <summary> 用于初始化一个 <see cref="NLogWriter" /> 类型的对象实例。 </summary>
         public NLogWriter()
         {
+        }
+
+        /// <summary> 初始化 NLog 日志服务。 </summary>
+        /// <param name="setup"> 实现了 <see cref="INLogConfigurationSetup" /> 类型接口的对象实例。 </param>
+        /// <seealso cref="INLogConfigurationSetup" />
+        public static void Setup(INLogConfigurationSetup setup)
+        {
+            LogManager.Configuration = setup.Get();
         }
 
         /// <summary> 记录日志。 </summary>
