@@ -37,7 +37,8 @@ namespace NetowlsStudio.Dep.DependencyInjection
                                                         Action<IServiceCollection, IConfiguration, IHostEnvironment> configure)
         {
             configure?.Invoke(services, configuration, environment);
-            return services.AddSingleton<IDepContext>(new DepContext(environment.EnvironmentName));
+            return services.AddSingleton<IDepContext>(new DepContext(environment.EnvironmentName))
+                           .AddTransient<IServiceDiscovery, ServiceDiscovery>();
         }
     }
 }
