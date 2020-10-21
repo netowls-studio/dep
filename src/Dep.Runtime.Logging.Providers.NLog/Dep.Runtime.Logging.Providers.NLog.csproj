@@ -1,0 +1,38 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0; net45;</TargetFrameworks>
+    <AssemblyName>NetowlsStudio.Dep.Runtime.Logging.NLogProvider</AssemblyName>
+    <RootNamespace>NetowlsStudio.Dep.Runtime.Logging.Providers</RootNamespace>
+  </PropertyGroup>
+
+  <Import Project="../MSBuild.Base.props" />
+  <Import Project="../MSBuild.NuGet.props" />
+  <ItemGroup>
+    <Content Remove="C:\Users\Netowls-Studio\.nuget\packages\nlog.config\4.7.5\contentFiles\any\any\NLog.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="App_Config\NLog.config" />
+    <None Remove="App_Config\NLog.Development.config" />
+    <None Remove="App_Config\NLog.Production.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Config\NLog.Production.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="App_Config\NLog.Development.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="App_Config\NLog.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="NLog.Config" Version="4.7.5" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Dep.Common\Dep.Common.csproj" />
+    <ProjectReference Include="..\Dep.Runtime.Logging.Abstractions\Dep.Runtime.Logging.Abstractions.csproj" />
+  </ItemGroup>
+
+</Project>
