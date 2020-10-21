@@ -46,6 +46,10 @@ namespace NetowlsStudio.Dep.DependencyInjection
         /// <param name="setup"> 实现了 <see cref="INLogConfigurationSetup" /> 类型接口的对象实例。 </param>
         /// <seealso cref="INLogConfigurationSetup" />
         /// <seealso cref="IServiceCollection" />
-        public static void ConfigureNLog(this IServiceCollection services, INLogConfigurationSetup setup) => NLogWriter.Setup(setup);
+        public static void ConfigureNLog(this IServiceCollection services, INLogConfigurationSetup setup)
+        {
+            NLogWriter.Setup(setup);
+            services.AddLogWriter<NLogWriter>();
+        }
     }
 }

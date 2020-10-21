@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0; net45;</TargetFrameworks>
+    <AssemblyName>NetowlsStudio.Dep.Runtime.Logging.DependencyInjection.NETClassic</AssemblyName>
+    <RootNamespace>NetowlsStudio.Dep.Unity</RootNamespace>
+  </PropertyGroup>
+
+  <Import Project="../MSBuild.Base.props" />
+  <Import Project="../MSBuild.NuGet.props" />
+  <ItemGroup>
+    <ProjectReference Include="..\Dep.Common\Dep.Common.csproj" />
+    <ProjectReference Include="..\Dep.DependencyInjection.Unity\Dep.DependencyInjection.Unity.csproj" />
+    <ProjectReference Include="..\Dep.Runtime.Logging.Abstractions\Dep.Runtime.Logging.Abstractions.csproj" />
+    <ProjectReference Include="..\Dep.Runtime.Logging.Providers.NLog\Dep.Runtime.Logging.Providers.NLog.csproj" />
+  </ItemGroup>
+
+</Project>
