@@ -13,6 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dep.DependencyInjection.Uni
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dep.Runtime.Logging.Abstractions", "Dep.Runtime.Logging.Abstractions\Dep.Runtime.Logging.Abstractions.csproj", "{B569FD80-44BF-4F34-AE40-F4BBFF36D5B1}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dep.Runtime.Logging.Providers.NLog", "Dep.Runtime.Logging.Providers.NLog\Dep.Runtime.Logging.Providers.NLog.csproj", "{B201B747-11D2-455C-B52B-52F51A89A69B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{B569FD80-44BF-4F34-AE40-F4BBFF36D5B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B569FD80-44BF-4F34-AE40-F4BBFF36D5B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B569FD80-44BF-4F34-AE40-F4BBFF36D5B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B201B747-11D2-455C-B52B-52F51A89A69B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B201B747-11D2-455C-B52B-52F51A89A69B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B201B747-11D2-455C-B52B-52F51A89A69B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B201B747-11D2-455C-B52B-52F51A89A69B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
