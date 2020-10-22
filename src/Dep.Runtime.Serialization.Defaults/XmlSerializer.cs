@@ -11,6 +11,7 @@
  * ********************************************************************************************
  */
 
+using System;
 using System.IO;
 using System.Runtime.Serialization;
 using System.Xml.Serialization;
@@ -57,8 +58,10 @@ namespace NetowlsStudio.Dep.Runtime.Serializations.Providers
         /// <returns> <typeparamref name="T" /> 类型的对象实例。 </returns>
         /// <seealso cref="ISerializableObject" />
         /// <seealso cref="Stream" />
-        protected override T InternalDeserialize<T>(Stream deserializationStream) 
-            => (T)new DotNetSerializer(typeof(T)).Deserialize(deserializationStream);
+        protected override T InternalDeserialize<T>(Stream deserializationStream)
+        {
+            return (T)new DotNetSerializer(typeof(T)).Deserialize(deserializationStream);
+        }
 
         /// <summary> 序列化 <typeparamref name="T" /> 类型的对象实例，并写入流 <paramref name="serializationStream" />。 </summary>
         /// <typeparam name="T"> 需要序列化的类型。 </typeparam>
@@ -67,6 +70,7 @@ namespace NetowlsStudio.Dep.Runtime.Serializations.Providers
         /// <seealso cref="ISerializableObject" />
         /// <seealso cref="Stream" />
         /// <exception cref="SerializationException"> </exception>
+        /// <exception cref="InvalidOperationException"> </exception>
         protected override void InternalSerialize<T>(T graph, Stream serializationStream)
         {
             ThrowIfCannotSerialize(graph);
