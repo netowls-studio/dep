@@ -6,6 +6,10 @@
 
 
 
+![GitHub issues](https://img.shields.io/github/issues/netowls-studio/dep?label=Issues&logo=github&style=flat-square) ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/netowls-studio/dep?label=Commits&logo=github&style=flat-square) ![GitHub last commit](https://img.shields.io/github/last-commit/netowls-studio/dep?label=Latest%20Commit&logo=github&style=flat-square) ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/netowls-studio/dep?label=Size&logo=github&style=flat-square) ![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/netowls-studio/dep?include_prereleases&label=Latest%20Release&logo=github&style=flat-square)
+
+
+
 - **介绍 - Introduction**
 
   - **概述 - Summary**
