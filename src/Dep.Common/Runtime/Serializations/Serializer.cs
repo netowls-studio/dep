@@ -12,6 +12,7 @@
  */
 
 using System.IO;
+using System.Runtime.Serialization;
 
 namespace NetowlsStudio.Dep.Runtime.Serializations
 {
@@ -83,5 +84,16 @@ namespace NetowlsStudio.Dep.Runtime.Serializations
         /// <seealso cref="ISerializableObject" />
         /// <seealso cref="Stream" />
         protected abstract void InternalSerialize<T>(T graph, Stream serializationStream) where T : class, ISerializableObject, new();
+
+        /// <summary> 当 <paramref name="graph" /> 不允许被序列化 (即： <see cref="ISerializableObject.CanSerialize" /> 等于 <c> false </c>) 时，将引发一个 <see cref="SerializationException" /> 类型的异常。 </summary>
+        /// <param name="graph"> 实现了 <see cref="ISerializableObject" /> 类型接口的对象实例。 </param>
+        /// <seealso cref="ISerializableObject" />
+        /// <seealso cref="ISerializableObject.CanSerialize" />
+        /// <exception cref="SerializationException"> </exception>
+        protected void ThrowIfCannotSerialize(ISerializableObject graph)
+        {
+            if (!graph.CanSerialize)
+                throw new SerializationException(string.Format(DepException.MessageTemplate, $"类型 “{graph.GetType().AssemblyQualifiedName}” 不能被序列化"));
+        }
     }
 }
