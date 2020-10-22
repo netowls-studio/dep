@@ -12,6 +12,7 @@
  */
 
 using NetowlsStudio.Dep.Annotations;
+using System.ComponentModel;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 
@@ -25,6 +26,7 @@ namespace NetowlsStudio.Dep.Runtime.Serializations.Providers
     /// <seealso cref="Serializer" />
     /// <seealso cref="Implementation" />
     [InjectionName(nameof(Implementation))]
+    [DisplayName("Microsoft .NET 二进制序列化")]
     public sealed class BinarySerializer : Serializer
     {
         /// <summary> 用于初始化一个 <see cref="BinarySerializer" /> 类型的对象实例。 </summary>
