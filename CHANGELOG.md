@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.0-alpha.8](https://github.com/netowls-studio/dep/compare/v1.0.0-alpha.7...v1.0.0-alpha.8) (2020-10-22)
+
+
+### New features
+
+* 完成了基础设施代码开发工作。 ([0e7e97c](https://github.com/netowls-studio/dep/commit/0e7e97cb1804f7b4eb4329542581f7d30c06d5c6)), closes [#3](https://github.com/netowls-studio/dep/issues/3)
+* 新增序列化服务依赖注入类库。 ([c2cafac](https://github.com/netowls-studio/dep/commit/c2cafac29210b3adba74b92b9575e856c7a26601))
+
 ## [1.0.0-alpha.7](https://github.com/netowls-studio/dep/compare/v1.0.0-alpha.6...v1.0.0-alpha.7) (2020-10-22)
 
 
