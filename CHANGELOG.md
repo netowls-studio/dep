@@ -2,6 +2,44 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.0-alpha.8](https://github.com/netowls-studio/dep/compare/v1.0.0-alpha.7...v1.0.0-alpha.8) (2020-10-22)
+
+
+### New features
+
+* 完成了基础设施代码开发工作。 ([0e7e97c](https://github.com/netowls-studio/dep/commit/0e7e97cb1804f7b4eb4329542581f7d30c06d5c6)), closes [#3](https://github.com/netowls-studio/dep/issues/3)
+* 新增序列化服务依赖注入类库。 ([c2cafac](https://github.com/netowls-studio/dep/commit/c2cafac29210b3adba74b92b9575e856c7a26601))
+
+## [1.0.0-alpha.7](https://github.com/netowls-studio/dep/compare/v1.0.0-alpha.6...v1.0.0-alpha.7) (2020-10-22)
+
+
+### ⚠ BREAKING CHANGES
+
+* 将 InjectionNameAttribute 移动到 Dep.Common.csproj 项目中。
+
+### Documentations
+
+* 修改了文档 docs/Code-Standard.md。 ([739f68b](https://github.com/netowls-studio/dep/commit/739f68b93fd2e33db38bfbdfd84de1c8999508fa))
+
+
+### Refactor
+
+* 将 InjectionNameAttribute 移动到 Dep.Common.csproj 项目中。 ([87fadac](https://github.com/netowls-studio/dep/commit/87fadac332d8dacabb21be70dffcba74aa149f6f))
+
+
+### New features
+
+* 新增 Newtonsoft.Json 默认序列化设置 JsonSerializerDefaultSettings。 ([6351ed0](https://github.com/netowls-studio/dep/commit/6351ed015beb1dcadd2da54107ecd15b25d02896))
+* 新增 XML 序列化程序 XmlSerializer。 ([94e4e5c](https://github.com/netowls-studio/dep/commit/94e4e5cee1a3448e77f86d615fdc3127eebb6deb))
+* 新增二进制序列化程序。 ([c98a2d4](https://github.com/netowls-studio/dep/commit/c98a2d476027b6083a1b38a2f95b47ef86238334))
+* 新增服务依赖注入发现接口 IServiceDiscovery。 ([f514ad6](https://github.com/netowls-studio/dep/commit/f514ad6ab0cdf1af5a08ab6f7c912d7018ab1d94))
+* 新增基于 Newtonsoft.Json 的序列化服务 JsonSerializer。 ([7ceb999](https://github.com/netowls-studio/dep/commit/7ceb9992695b70984686e013374886d422025b93))
+* 新增可序列化对象基类 SerializableObject。 ([85e9e17](https://github.com/netowls-studio/dep/commit/85e9e176fae4446d951cd0cfe00f3a2007d30423))
+* 新增序列化服务基类。 ([647bfdf](https://github.com/netowls-studio/dep/commit/647bfdf76e21c897b0a4fcef6666d3c30324b365))
+* 新增序列化接口 ISerializer。 ([6771773](https://github.com/netowls-studio/dep/commit/6771773a7c073c055150259fafc74fb40b6391e4))
+* 修改了 XmlSerializer.InternalSerialize 的 XML 注释，消除了 Visual Studio 警告。 ([4788f99](https://github.com/netowls-studio/dep/commit/4788f99e62db2fad2365bb74b806c9785f1c3829))
+* 增加 DisplayNameAttribute 特性描述。 ([6aca563](https://github.com/netowls-studio/dep/commit/6aca563bd83d963b36757c248b967fda3ab197dd))
+
 ## [1.0.0-alpha.6](https://github.com/netowls-studio/dep/compare/v1.0.0-alpha.5...v1.0.0-alpha.6) (2020-10-21)
 
 

@@ -12,6 +12,7 @@
 | >= Microsoft [Unity](https://www.nuget.org/packages/Unity/5.11.7) 5.11.7 |
 | >= [EnterpriseLibrary.Common.NetCore](https://www.nuget.org/packages/EnterpriseLibrary.Common.NetCore/6.3.0) 6.3.0 |
 | >= [NLog](https://www.nuget.org/packages/NLog/4.7.5) 4.7.5   |
+| >= [Newtonsoft.Json](https://www.nuget.org/packages/Newtonsoft.Json/12.0.3) 12.0.3 |
 
 
 

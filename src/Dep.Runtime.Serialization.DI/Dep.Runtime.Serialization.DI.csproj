@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>NetowlsStudio.Dep.Runtime.Serializations.DependencyInjection.NETCore</AssemblyName>
+    <RootNamespace>NetowlsStudio.Dep.DependencyInjection</RootNamespace>
+  </PropertyGroup>
+
+  <Import Project="../MSBuild.Base.props" />
+  <Import Project="../MSBuild.NuGet.props" />
+  <ItemGroup>
+    <ProjectReference Include="..\Dep.Common\Dep.Common.csproj" />
+    <ProjectReference Include="..\Dep.DependencyInjection\Dep.DependencyInjection.csproj" />
+    <ProjectReference Include="..\Dep.Runtime.Serialization.Defaults\Dep.Runtime.Serialization.Defaults.csproj" />
+    <ProjectReference Include="..\Dep.Runtime.Serialization.NewtonsoftJson\Dep.Runtime.Serialization.NewtonsoftJson.csproj" />
+  </ItemGroup>
+
+</Project>

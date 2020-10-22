@@ -10,7 +10,7 @@
 
   - **概述 - Summary**
 
-    **[DEP][Github-Repo]** 主要用于在不同系统、甚至是不同企业中交换数据、报文等。功能和 [ETL](https://blog.csdn.net/jianzhang11/article/details/104240047/) 类似，但是 **[DEP][Github-Repo]** 仅负责数据的**“异地”**搬运，同时利用 **[RabbitMQ][RabbitMQ]** 等技术手段实现容错、补发等功能。
+    **[DEP][Github-Repo]** 主要用于在不同系统、甚至是不同企业中交换数据、报文等。功能和 [ETL](https://blog.csdn.net/jianzhang11/article/details/104240047/) 类似，但是 **[DEP][Github-Repo]** 更注重数据的 **“异地”** 搬运，同时利用 **[RabbitMQ][RabbitMQ]** 等技术手段实现容错、补发等功能。
 
   - **开发环境 - Development Environment**
 
