@@ -11,6 +11,7 @@
  * ********************************************************************************************
  */
 
+using NetowlsStudio.Dep.Annotations;
 using System;
 using System.IO;
 using System.Runtime.Serialization;
@@ -21,6 +22,7 @@ namespace NetowlsStudio.Dep.Runtime.Serializations.Providers
 {
     /// <summary> 提供了基于 .NET 默认提供的 <see cref="DotNetSerializer" /> 相关的序列化方法。 </summary>
     /// <seealso cref="Serializer" />
+    [InjectionName(nameof(XmlSerializer))]
     public class XmlSerializer : Serializer
     {
         /// <summary> 用于初始化一个 <see cref="XmlSerializer" /> 类型的对象实例。 </summary>

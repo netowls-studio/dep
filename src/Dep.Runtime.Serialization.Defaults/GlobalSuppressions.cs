@@ -6,3 +6,5 @@
 using System.Diagnostics.CodeAnalysis;
 
 [assembly: SuppressMessage("Microsoft.Design", "BaseMethodViolations:Exception(s) thrown but not declared in base method", Justification = "<挂起>", Scope = "member", Target = "~M:NetowlsStudio.Dep.Runtime.Serializations.Providers.XmlSerializer.InternalSerialize``1(``0,System.IO.Stream)")]
+[assembly: SuppressMessage("Microsoft.Design", "BaseMethodViolations:Exception(s) thrown but not declared in base method", Justification = "<挂起>", Scope = "member", Target = "~M:NetowlsStudio.Dep.Runtime.Serializations.Providers.BinarySerializer.InternalDeserialize``1(System.IO.Stream)~``0")]
+[assembly: SuppressMessage("Microsoft.Design", "BaseMethodViolations:Exception(s) thrown but not declared in base method", Justification = "<挂起>", Scope = "member", Target = "~M:NetowlsStudio.Dep.Runtime.Serializations.Providers.BinarySerializer.InternalSerialize``1(``0,System.IO.Stream)")]
