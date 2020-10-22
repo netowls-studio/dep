@@ -13,7 +13,7 @@
 
 using System;
 
-namespace NetowlsStudio.Dep.DependencyInjection.Annotations
+namespace NetowlsStudio.Dep.Annotations
 {
     /// <summary>
     /// 提供了标识注入服务名称相关的方法。

@@ -12,7 +12,7 @@
  */
 
 using Microsoft.Extensions.DependencyInjection;
-using NetowlsStudio.Dep.DependencyInjection.Annotations;
+using NetowlsStudio.Dep.Annotations;
 using System;
 
 namespace NetowlsStudio.Dep.DependencyInjection
