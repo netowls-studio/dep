@@ -18,6 +18,6 @@ jobs:
       with:
         dotnet-version: 3.1.403
     - name: NuGet Restore Dependencies
-      run: dotnet restore
+      run: dotnet restore ./src/Dep.Common.sln
     - name: Building
       run: dotnet build ./src/Dep.Common.sln --framework netcoreapp3.1 --configuration Release --no-restore
