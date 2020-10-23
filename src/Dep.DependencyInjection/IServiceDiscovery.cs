@@ -11,8 +11,6 @@
  * ********************************************************************************************
  */
 
-using NetowlsStudio.Dep.DependencyInjection.Annotations;
-
 namespace NetowlsStudio.Dep.DependencyInjection
 {
     /// <summary> 定义了发现依赖注入服务的接口。 </summary>
