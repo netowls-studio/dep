@@ -11,8 +11,6 @@
  * ********************************************************************************************
  */
 
-using NetowlsStudio.Dep.DependencyInjection.Annotations;
-
 namespace NetowlsStudio.Dep.DependencyInjection
 {
     /// <summary> 定义了发现依赖注入服务的接口。 </summary>
@@ -22,7 +20,6 @@ namespace NetowlsStudio.Dep.DependencyInjection
         /// <typeparam name="TService"> 服务类型。 </typeparam>
         /// <param name="name"> 服务注册名称。 </param>
         /// <returns> <typeparamref name="TService" /> 类型的对象实例。 </returns>
-        /// <seealso cref="InjectionNameAttribute" />
         TService Discover<TService>(string name);
     }
 }
