@@ -28,6 +28,7 @@
     | Java JDK                                       | 14.0.2                                                       |      |
     | Zookeeper                                      |                                                              |      |
     | Consul                                         |                                                              |      |
+    | NuGet                                          | [5.7.0](https://dist.nuget.org/win-x86-commandline/v5.7.0/nuget.exe) |      |
 
   - **部署环境 - Deployment Environment**
 
