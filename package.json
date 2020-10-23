@@ -9,7 +9,7 @@
   "name": "@netowls-studio/dotnet-dep",
   "description": "'DEP' is an open source data exchange platform, or it should be called data exchange middleware. It is used to exchange dataset, files and etc. produced by different systems.",
   "displayName": "数据交换平台 - Data Exchange",
-  "homepage": "https://github.com/netowls-studio/dep",
+  "homepage": "https://netowls-studio.github.io/dep",
   "icon": "./assets/Icons/Dep-128.png",
   "license": "MS-PL",
   "markdown": "github",
