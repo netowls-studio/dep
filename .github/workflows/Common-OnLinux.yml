@@ -20,4 +20,4 @@ jobs:
     - name: NuGet Restore Dependencies
       run: dotnet restore ./src/Dep.Common.sln
     - name: Building
-      run: dotnet build ./src/Dep.Common.sln --framework netcoreapp3.1 --configuration Release --no-restore
+      run: dotnet build ./src/Dep.Common.sln --configuration Release --no-restore
