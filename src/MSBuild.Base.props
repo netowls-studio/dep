@@ -6,7 +6,7 @@
     <Description>"DEP" is an open source data exchange platform, or it should be called data exchange middleware. It is used to exchange dataset, files and etc. produced by different systems.</Description>
     <Copyright>Copyright © 2006 - 2020 Wang Yucai. All rights reserved.</Copyright>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
-    <PackageProjectUrl>https://github.com/netowls-studio/dep</PackageProjectUrl>
+    <PackageProjectUrl>https://netowls-studio.github.io/dep</PackageProjectUrl>
     <PackageIcon>Dep-128.png</PackageIcon>
     <RepositoryUrl>https://github.com/netowls-studio/dep</RepositoryUrl>
     <RepositoryType>git; github</RepositoryType>
