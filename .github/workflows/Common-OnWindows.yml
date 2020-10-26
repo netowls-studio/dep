@@ -24,5 +24,6 @@ jobs:
     - name: Register Github NuGet Source
       run: dotnet nuget add source https://nuget.pkg.github.com/netowls-studio/index.json -n MyGet -u netowls-studio -p ${{secrets.PACKAGES}}
     - name: Pushing
-      run: dotnet nuget push ".Build/NuGet/Common/" --source "MyGet" --skip-duplicate
+      shell: pwsh
+      run: dotnet nuget push (ls ./Build/NuGet/Common/*.nupkg) -s MyGet --skip-duplicate
       
