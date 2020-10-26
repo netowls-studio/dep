@@ -20,11 +20,9 @@ jobs:
     - name: Building
       run: dotnet build ./src/Dep.Common.sln --configuration Release --no-restore
     - name: Packing
-      run: dotnet pack ./src/Dep.Common.sln --configuration Release --no-build --output ./Build/NuGet/Common
+      run: dotnet pack ./src/Dep.Common.sln --configuration Release --no-build --output ./
     - name: Register Github NuGet Source
       run: dotnet nuget add source https://nuget.pkg.github.com/netowls-studio/index.json -n MyGet -u netowls-studio -p ${{secrets.PACKAGES}}
-    - name: Enter The Packages Folder
-      run: cd ./Build/NuGet/Common
     - name: Pushing
       run: dotnet nuget push "*.nupkg" -s MyGet --skip-duplicate -k ${{secrets.PACKAGES}}
       
