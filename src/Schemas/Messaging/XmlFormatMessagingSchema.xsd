@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:dep="https://github.com/netowls-studio/dep"
+    targetNamespace="https://github.com/netowls-studio/dep" elementFormDefault="qualified">
+    
+    <xs:simpleType name="NotEmptyString">
+        <xs:annotation><xs:documentation>不可以为空的字符串。</xs:documentation></xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:minLength value="1"></xs:minLength>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="LETen">
+        <xs:annotation><xs:documentation>小于等于 10 的整型值。</xs:documentation></xs:annotation>
+        <xs:restriction base="xs:integer">
+            <xs:maxInclusive value="10"></xs:maxInclusive>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="LETen1">
+        <xs:annotation><xs:documentation>大于等于 0，且小于等于 10 的整型值。</xs:documentation></xs:annotation>
+        <xs:restriction base="xs:integer">
+            <xs:maxInclusive value="10"></xs:maxInclusive>
+            <xs:minInclusive value="0"></xs:minInclusive>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:complexType name="ReceiptEndpoint">
+        <xs:annotation><xs:documentation>回执消息终结点。</xs:documentation></xs:annotation>
+        <xs:attribute name="uri" type="dep:NotEmptyString" use="required">
+            <xs:annotation><xs:documentation>接收回执消息的 HTTP URI 地址。</xs:documentation></xs:annotation>
+        </xs:attribute>
+    </xs:complexType>
+    
+</xs:schema>
