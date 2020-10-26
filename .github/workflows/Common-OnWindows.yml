@@ -1,0 +1,23 @@
+name: BuildCommonProjects-OnWindows
+
+on:
+  pull_request:
+    branches: [ dev-1.0 ]
+
+jobs:
+  build:
+
+    runs-on: windows
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Setup Microsoft .NET Core Environment
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 3.1.403
+    - name: NuGet Restore Dependencies
+      run: dotnet restore ./src/Dep.Common.sln
+    - name: Building
+      run: dotnet build ./src/Dep.Common.sln --configuration Release --no-restore
+    - name: Packing
+      run: dotnet pack ./src/Dep.Common.sln --configuration Release --no-build --output ../Build/NuGet/Common
