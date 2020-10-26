@@ -2,6 +2,63 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.0-alpha.9](https://github.com/netowls-studio/dep/compare/v1.0.0-alpha.8...v1.0.0-alpha.9) (2020-10-26)
+
+
+### Bugs fixed
+
+* 删除了无用的注释信息 ([5520a41](https://github.com/netowls-studio/dep/commit/5520a41947b577000447281f144407029e18f946))
+* 新增 MSBuild.NuGet.props 项目属性文件。 ([1f024cf](https://github.com/netowls-studio/dep/commit/1f024cf2535df274b90e3d8ac72daa4d49a424e7))
+* 修复了 IServiceDiscovery 接口中多余的命名空间引用。 ([966b2ce](https://github.com/netowls-studio/dep/commit/966b2ce956a5227c57e9a2f12799d4e0dfd2efbb))
+
+
+### New features
+
+* 新增 Github Actions 配置。 ([c0827bd](https://github.com/netowls-studio/dep/commit/c0827bd92ed41ae4252133abdd04559a81c66930))
+* 新增 NuGet 配置文件。 ([2caac25](https://github.com/netowls-studio/dep/commit/2caac2509d3c37af09d8eeb9e30ff7aa63392dc6))
+* 修改了 CI 构建策略。 ([4936888](https://github.com/netowls-studio/dep/commit/4936888ea715dff844629d1005a086925b06c1f2))
+* 修改了 NuGet 还原配置。 ([81721e9](https://github.com/netowls-studio/dep/commit/81721e92fcd92bdf348aa18d042e21ba2822b1f1))
+* 修改了项目 URL 地址配置。 ([e87d9ae](https://github.com/netowls-studio/dep/commit/e87d9ae1bf7206f5f16ec5c6dfdc8783b4b5e4d3))
+
+
+### Tools
+
+* 新增 NuGet 命令行工具。 ([caed029](https://github.com/netowls-studio/dep/commit/caed029572cd30965c37f83a460d3a7d009287d6))
+* 新增 PowerShell 构建流程。 ([e8cf185](https://github.com/netowls-studio/dep/commit/e8cf185a9eacb4cd25fa5cf364b079a3da36a5ee))
+
+
+### CI & CD
+
+* 调整 NuGet 构建包路径。 ([13b422b](https://github.com/netowls-studio/dep/commit/13b422ba58de87aa1ad4cdccd9ce0f9022274e09))
+* 调整 Push 脚本。 ([9d1fb6e](https://github.com/netowls-studio/dep/commit/9d1fb6e7c7071c87f21da5a8473d2d030b2fd20b))
+* 调整 Windows 构建脚本，修改了 NuGet 命令行工具下载命令。 ([cf7d5f8](https://github.com/netowls-studio/dep/commit/cf7d5f828efde00f5763a87d83a5ee44cae3bbdb))
+* 调整了 APIKey 配置。 ([f0e1e44](https://github.com/netowls-studio/dep/commit/f0e1e445285fb5292207e7e4a91e99688883a292))
+* 调整批量推送脚本。 ([75031c4](https://github.com/netowls-studio/dep/commit/75031c4f29243a29c8c7449acc0a0a0f69d7ea44))
+* 新增 NuGet 推包流程。 ([da93046](https://github.com/netowls-studio/dep/commit/da930461f464ef334f8dc1c72bc5b845c0a6244f))
+* 修改了 .NET 版本号为 netstandard2.0。 ([8605e2e](https://github.com/netowls-studio/dep/commit/8605e2ea6f65df5c385455b8ee7fa29f6ec0ea1f))
+* 修改了 CI 打包配置文件中的路径错误。 ([b40bb50](https://github.com/netowls-studio/dep/commit/b40bb5071df7e3c6da262d5141f606c88bffb58b))
+* 修改了 Github Actions 构建时的 Framework 版本。 ([31e2ed0](https://github.com/netowls-studio/dep/commit/31e2ed0ddbca8a82adb87dfee5eb28c7a10704d7))
+* 修改了 Github Actions 配置。 ([f2a0c43](https://github.com/netowls-studio/dep/commit/f2a0c43156120bb2ad4c939f35f590e429d85730))
+* 修改了 Github Actions 配置。 ([971d6a3](https://github.com/netowls-studio/dep/commit/971d6a3946a335c21cf52a4fbd322e2a13ec5933))
+* 修改了 Github Actions 配置文件。 ([7dc337d](https://github.com/netowls-studio/dep/commit/7dc337dc9714bfb02c6096074b47685b898d6e1e))
+* 修改了 Github Actions 配置文件。 ([b36a8d2](https://github.com/netowls-studio/dep/commit/b36a8d21539da938b669ddef0e353f8e26ce6c1d))
+* 修改了 Github Actions CI 配置。 ([dbc2580](https://github.com/netowls-studio/dep/commit/dbc2580aa8bacd8bb24c52f0cbfef478189a8184))
+* 修改了 Linux 构建的名称。 ([61f1946](https://github.com/netowls-studio/dep/commit/61f194685858984531dddebad804f2e6b513bb63))
+* 修改了 NuGet 打包规则。 ([5207701](https://github.com/netowls-studio/dep/commit/5207701259f2b7814d2868d35995dcd722b8b9ca))
+* 修改了 NuGet 推送流程。 ([84c3c20](https://github.com/netowls-studio/dep/commit/84c3c20ab55fc543ec62729af948928d5e0111cf))
+* 修改了 NuGet 推送路径。 ([a0fefc5](https://github.com/netowls-studio/dep/commit/a0fefc5bd589d6661c6f7b9f2c0e5c3fe77fa205))
+* 修改了 Windows 版本。 ([702a43c](https://github.com/netowls-studio/dep/commit/702a43ce96aa8422ced7d57281228dc9f33cd4ff))
+* 修改了 Windows 版本。 ([daf06e6](https://github.com/netowls-studio/dep/commit/daf06e6dfb1c3c29adebe5d5a48f78e75dd7bc0c))
+* 增加 CD 脚本，尝试推送。 ([e814195](https://github.com/netowls-studio/dep/commit/e814195abe92378b443e43616b0dc7770e9139d9))
+* 增加了适用于 Windows 的 Github Actions 构建流程。 ([df44501](https://github.com/netowls-studio/dep/commit/df44501edac2ef5c9562aa1e2b88885a3309ee46))
+
+
+### Documentations
+
+* 新增构建状态说明文档。 ([ca4afe1](https://github.com/netowls-studio/dep/commit/ca4afe1251a7985b539ec609a430236d5ae18c2a))
+* 修改了构建状态说明文档。 ([beb598f](https://github.com/netowls-studio/dep/commit/beb598fac82d971dcfba29cf5e395c4908672480))
+* 修改了项目自述文件。 ([3c20222](https://github.com/netowls-studio/dep/commit/3c20222a7aa8193290b0505b9e529d4376b10464))
+
 ## [1.0.0-alpha.8](https://github.com/netowls-studio/dep/compare/v1.0.0-alpha.7...v1.0.0-alpha.8) (2020-10-22)
 
 
