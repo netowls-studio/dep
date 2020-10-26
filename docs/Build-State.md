@@ -4,11 +4,11 @@
 
 
 
-| 项目         | Ubuntu                                                       | Windows |
-| ------------ | ------------------------------------------------------------ | ------- |
-| 基础设施项目 | ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/netowls-studio/dep/BuildCommonProjects-OnLinux?label=Build%20On%20Ubuntu&logo=ubuntu&style=flat-square) |         |
-|              |                                                              |         |
-|              |                                                              |         |
+| 项目         | Ubuntu                                                       | Windows                                                      |
+| ------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| 基础设施项目 | ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/netowls-studio/dep/BuildCommonProjects-OnLinux?label=Build%20On%20Ubuntu&logo=Linux&style=flat-square) | ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/netowls-studio/dep/BuildCommonProjects-OnWindows?label=Build%20On%20Windows&logo=windows&style=flat-square) |
+|              |                                                              |                                                              |
+|              |                                                              |                                                              |
 
 
 
