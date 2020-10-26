@@ -22,4 +22,5 @@ jobs:
     - name: Packing
       run: dotnet pack ./src/Dep.Common.sln --configuration Release --no-build --output ./Build/NuGet/Common
     - name: Pushing
-      shell: pwsh Invoke-WebRequest -Uri https://dist.nuget.org/win-x86-commandline/latest/nuget.exe -Method Get -OutFile ./Build/NuGet/nuget.exe
+      shell: powershell
+      run: Invoke-WebRequest -Uri "https://dist.nuget.org/win-x86-commandline/latest/nuget.exe" -Method Get -OutFile "./Build/NuGet/nuget.exe"
