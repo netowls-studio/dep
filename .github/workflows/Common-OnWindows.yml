@@ -21,6 +21,8 @@ jobs:
       run: dotnet build ./src/Dep.Common.sln --configuration Release --no-restore
     - name: Packing
       run: dotnet pack ./src/Dep.Common.sln --configuration Release --no-build --output ./Build/NuGet/Common
+    - name: Register Github NuGet Source
+      run: dotnet nuget add source https://nuget.pkg.github.com/netowls-studio/index.json -n MyGet -u netowls-studio -p ${{secrets.PACKAGES}}
     - name: Pushing
-      shell: powershell
-      run: Invoke-WebRequest -Uri "https://dist.nuget.org/win-x86-commandline/latest/nuget.exe" -Method Get -OutFile "./Build/NuGet/nuget.exe"
+      run: dotnet nuget push ".Build/NuGet/Common/" --source "MyGet" --skip-duplicate
+      
