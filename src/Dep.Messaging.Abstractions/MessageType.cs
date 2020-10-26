@@ -22,7 +22,13 @@ namespace NetowlsStudio.Dep.Messaging
         /// <summary> 用于同步服务器、监听器、代理间的状态同步信息。 </summary>
         StateSynchronization = 2,
 
-        /// <summary> 死信消息。此类消息主要用户补发订阅失败的数据等。  </summary>
-        Deadletter = 3
+        /// <summary> 死信消息。此类消息主要用户补发订阅失败的数据等。 </summary>
+        Deadletter = 3,
+
+        /// <summary> 中转的消息。此类消息用于比较复杂的网络环境。在不同网络、服务器中中转搬运数据。 </summary>
+        Transition = 4,
+
+        /// <summary> 回执消息。 </summary>
+        Receipt = 5
     }
 }
