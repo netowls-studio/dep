@@ -21,3 +21,5 @@ jobs:
       run: dotnet build ./src/Dep.Common.sln --configuration Release --no-restore
     - name: Packing
       run: dotnet pack ./src/Dep.Common.sln --configuration Release --no-build --output ../Build/NuGet/Common
+    - name: Pushing
+      shell: pwsh 
