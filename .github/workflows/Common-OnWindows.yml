@@ -25,5 +25,5 @@ jobs:
       run: dotnet nuget add source https://nuget.pkg.github.com/netowls-studio/index.json -n MyGet -u netowls-studio -p ${{secrets.PACKAGES}}
     - name: Pushing
       shell: pwsh
-      run: dotnet nuget push (ls ./Build/NuGet/Common/*.nupkg) -s MyGet --skip-duplicate
+      run: dotnet nuget push (ls ./Build/NuGet/Common/*.nupkg) -s MyGet --skip-duplicate -k ${{secrets.PACKAGES}}
       
