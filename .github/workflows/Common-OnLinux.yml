@@ -1,4 +1,4 @@
-name: BuildCommonProjects-OnLinux
+name: BuildCommonProjects-OnUbuntu
 
 on:
   pull_request:
