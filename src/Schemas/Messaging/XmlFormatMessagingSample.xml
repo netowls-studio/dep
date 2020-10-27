@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dep:dep xmlns:dep="https://github.com/netowls-studio/dep"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="https://github.com/netowls-studio/dep XmlFormatMessagingSchema.xsd">
+    <dep:summary id="77037DAD-8223-4374-A492-BB1F71A8C2DD" groupingKey="Sample" allowedMaxRetryTimes="5" encoding="UTF-8" receiptRequired="true" retriedTimes="0" serializer="JsonSerializer" size="1" type="Normal" contextKeyToken="a"/>
+    <dep:details>
+        <dep:sign>sdsada</dep:sign>
+        <dep:exchangePaths>
+            <dep:add id="1" description="默认的交换路径">
+                <dep:endpoint sortId="1">
+                    <dep:main id="0" prioritizedChannel="RabbitMQ" role="Server">
+                        <dep:rabbitMessageQueue hostName="localhost:5672" routingKey="test" exchangeName="dep-exchange.topic.journal" vHostName="/" userName="sa" password="123456"/>
+                    </dep:main>
+                    <dep:receipt id="0" prioritizedChannel="Http" role="Transition">
+                        <dep:http uri="http://localhost"/>
+                    </dep:receipt>
+                </dep:endpoint>
+            </dep:add>
+        </dep:exchangePaths>
+        <dep:content>asdfasdfa</dep:content>
+    </dep:details>
+</dep:dep>

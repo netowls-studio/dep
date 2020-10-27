@@ -23,8 +23,8 @@
     | Dep.Runtime.Serialization.DI.Unity         | 运行时序列化（所有）依赖注入（Microsoft Unity）。     |
     | ~~Dep.Infrastructures.DI~~                 | ~~基础设施服务（所有）依赖注入。~~                    |
     | ~~Dep.Infrastructures.DI.Unity~~           | ~~基础设施服务（所有）依赖注入（Microsoft Unity）。~~ |
-    | Scripting/CakeBuild                        | CakeBuild 构建脚本定义。                              |
-    | Scripting/BuildEnvironmentSetup.ps1        | 构建环境初始化脚本。                                  |
+    | ~~Scripting/CakeBuild~~                    | ~~CakeBuild 构建脚本定义。~~                          |
+    | ~~Scripting/BuildEnvironmentSetup.ps1~~    | ~~构建环境初始化脚本。~~                              |
 
   - **服务器 Server**
   

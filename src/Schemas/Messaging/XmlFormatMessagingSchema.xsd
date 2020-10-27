@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:dep="https://github.com/netowls-studio/dep"
+    targetNamespace="https://github.com/netowls-studio/dep" elementFormDefault="qualified">
+    
+    <xs:simpleType name="NotEmptyString">
+        <xs:annotation><xs:documentation>不可以为空的字符串。</xs:documentation></xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:minLength value="1"></xs:minLength>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="LETen">
+        <xs:annotation><xs:documentation>小于等于 10 的整型值。</xs:documentation></xs:annotation>
+        <xs:restriction base="xs:integer">
+            <xs:maxInclusive value="10"></xs:maxInclusive>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="LETen1">
+        <xs:annotation><xs:documentation>大于等于 0，且小于等于 10 的整型值。</xs:documentation></xs:annotation>
+        <xs:restriction base="xs:integer">
+            <xs:maxInclusive value="10"></xs:maxInclusive>
+            <xs:minInclusive value="0"></xs:minInclusive>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="MessageTypes">
+        <xs:annotation><xs:documentation>消息类型。</xs:documentation></xs:annotation>
+        <xs:restriction base="dep:NotEmptyString">
+            <xs:enumeration value="Normal"><xs:annotation><xs:documentation>正常的消息。此类消息主要面向数据发布、数据订阅等。</xs:documentation></xs:annotation></xs:enumeration>
+            <xs:enumeration value="StateSynchronization"><xs:annotation><xs:documentation>用于同步服务器、监听器、代理间的状态同步信息。</xs:documentation></xs:annotation></xs:enumeration>
+            <xs:enumeration value="Deadletter"><xs:annotation><xs:documentation>死信消息。此类消息主要用户补发订阅失败的数据等。</xs:documentation></xs:annotation></xs:enumeration>
+            <xs:enumeration value="Transition"><xs:annotation><xs:documentation>中转的消息。此类消息用于比较复杂的网络环境。在不同网络、服务器中中转搬运数据。</xs:documentation></xs:annotation></xs:enumeration>
+            <xs:enumeration value="Receipt"><xs:annotation><xs:documentation>回执消息。</xs:documentation></xs:annotation></xs:enumeration>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="CommunicateChannels">
+        <xs:annotation><xs:documentation>通信渠道类型。</xs:documentation></xs:annotation>
+        <xs:restriction base="dep:NotEmptyString">
+            <xs:enumeration value="Http"><xs:annotation><xs:documentation>基于 ASP.NET Core WebApi 的 HTTP 渠道。</xs:documentation></xs:annotation></xs:enumeration>
+            <xs:enumeration value="RabbitMQ"><xs:annotation><xs:documentation>基于 RabbitMQ 的消息队列渠道。</xs:documentation></xs:annotation></xs:enumeration>
+            <xs:enumeration value="Consul"><xs:annotation><xs:documentation>基于 Consul 的状态同步渠道。</xs:documentation></xs:annotation></xs:enumeration>
+            <xs:enumeration value="Zookeeper"><xs:annotation><xs:documentation>基于 Apache Zookeeper 的状态同步渠道。</xs:documentation></xs:annotation></xs:enumeration>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="EndpointRoles">
+        <xs:annotation><xs:documentation>终结点角色信息。</xs:documentation></xs:annotation>
+        <xs:restriction base="dep:NotEmptyString">
+            <xs:enumeration value="Server"><xs:annotation><xs:documentation>DEP 服务器节点。</xs:documentation></xs:annotation></xs:enumeration>
+            <xs:enumeration value="Transition"><xs:annotation><xs:documentation>DEP 中转节点。</xs:documentation></xs:annotation></xs:enumeration>
+            <xs:enumeration value="Watcher"><xs:annotation><xs:documentation>DEP 监听节点。</xs:documentation></xs:annotation></xs:enumeration>
+            <xs:enumeration value="Agent"><xs:annotation><xs:documentation>DEP 代理节点。</xs:documentation></xs:annotation></xs:enumeration>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="MessageSerializers">
+        <xs:annotation><xs:documentation>消息序列化器。</xs:documentation></xs:annotation>
+        <xs:restriction base="dep:NotEmptyString">
+            <xs:enumeration value="JsonSerializer"><xs:annotation><xs:documentation>基于 Newtonsoft.Json 的 JSON 序列化器。</xs:documentation></xs:annotation></xs:enumeration>
+            <xs:enumeration value="XmlSerializer"><xs:annotation><xs:documentation>.NET Framework 默认提供的 XML 序列化器。</xs:documentation></xs:annotation></xs:enumeration>
+            <xs:enumeration value="BinarySerializer"><xs:annotation><xs:documentation>.NET Framework 默认提供的二进制序列化器。</xs:documentation></xs:annotation></xs:enumeration>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:complexType name="HttpChannel">
+        <xs:annotation><xs:documentation>基于 ASP.NET Core WebApi 的 HTTP 通信渠道。</xs:documentation></xs:annotation>
+        <xs:attribute name="uri" type="dep:NotEmptyString" use="required"><xs:annotation><xs:documentation>用于通信的 URI 地址。</xs:documentation></xs:annotation></xs:attribute>
+    </xs:complexType>
+    
+    <xs:complexType name="RabbitMQChannel">
+        <xs:annotation><xs:documentation>基于 RabbitMQ 的通信渠道。</xs:documentation></xs:annotation>
+        <xs:attribute name="hostName" type="dep:NotEmptyString" use="required"><xs:annotation><xs:documentation>RabbitMQ 主机名称或者 IP 地址 &amp; 端口号。</xs:documentation></xs:annotation></xs:attribute>
+        <xs:attribute name="vHostName" type="dep:NotEmptyString" default="/"><xs:annotation><xs:documentation>RabbitMQ VHost 名称。</xs:documentation></xs:annotation></xs:attribute>
+        <xs:attribute name="exchangeName" type="dep:NotEmptyString" default="dep-exchange.topic.journal"><xs:annotation><xs:documentation>RabbitMQ 交换机名称。</xs:documentation></xs:annotation></xs:attribute>
+        <xs:attribute name="routingKey" type="dep:NotEmptyString" use="required"><xs:annotation><xs:documentation>RabbitMQ 路由标识。</xs:documentation></xs:annotation></xs:attribute>
+        <xs:attribute name="userName" type="dep:NotEmptyString" use="required"><xs:annotation><xs:documentation>RabbitMQ 用户名。</xs:documentation></xs:annotation></xs:attribute>
+        <xs:attribute name="password" type="dep:NotEmptyString" use="required"><xs:annotation><xs:documentation>RabbitMQ 密码。</xs:documentation></xs:annotation></xs:attribute>
+    </xs:complexType>
+    
+    <xs:complexType name="Endpoint">
+        <xs:annotation><xs:documentation>DEP 终结点信息。</xs:documentation></xs:annotation>
+        <xs:choice minOccurs="1">
+            <xs:element name="http" type="dep:HttpChannel"><xs:annotation><xs:documentation>基于 ASP.NET Core WebApi 的 HTTP 终结点。</xs:documentation></xs:annotation></xs:element>
+            <xs:element name="rabbitMessageQueue" type="dep:RabbitMQChannel"><xs:annotation><xs:documentation>基于 RabbitMQ 的终结点。</xs:documentation></xs:annotation></xs:element>
+        </xs:choice>
+        <xs:attribute name="role" type="dep:EndpointRoles" default="Server"><xs:annotation><xs:documentation>终结点角色信息。</xs:documentation></xs:annotation></xs:attribute>
+        <xs:attribute name="id" type="xs:int" default="0"></xs:attribute>
+        <xs:attribute name="prioritizedChannel" type="dep:CommunicateChannels" default="RabbitMQ"><xs:annotation><xs:documentation>在 HTTP 和 RabbitMQ 中，优先的通信渠道。</xs:documentation></xs:annotation></xs:attribute>
+    </xs:complexType>
+    
+    <xs:complexType name="MessageSummary">
+        <xs:annotation><xs:documentation>DEP 消息摘要描述。</xs:documentation></xs:annotation>
+        <xs:attribute name="id" type="dep:NotEmptyString" use="required"><xs:annotation><xs:documentation>消息标识。</xs:documentation></xs:annotation></xs:attribute>
+        <xs:attribute name="groupingKey" type="dep:NotEmptyString" use="required"><xs:annotation><xs:documentation>消息分组标识。</xs:documentation></xs:annotation></xs:attribute>
+        <xs:attribute name="type" type="dep:MessageTypes" default="Normal"><xs:annotation><xs:documentation>消息类型。</xs:documentation></xs:annotation></xs:attribute>
+        <xs:attribute name="serializer" type="dep:MessageSerializers" default="JsonSerializer"><xs:annotation><xs:documentation>消息序列化器。</xs:documentation></xs:annotation></xs:attribute>
+        <xs:attribute name="encoding" type="dep:NotEmptyString" default="UTF-8"><xs:annotation><xs:documentation>编码规则。</xs:documentation></xs:annotation></xs:attribute>
+        <xs:attribute name="size" default="1">
+            <xs:annotation><xs:documentation>消息字节大小。</xs:documentation></xs:annotation>
+            <xs:simpleType>
+                <xs:restriction base="xs:integer">
+                    <xs:minInclusive value="1"></xs:minInclusive>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:attribute>
+        <xs:attribute name="retriedTimes" type="dep:LETen1" default="0"><xs:annotation><xs:documentation>消息已经重试的次数。</xs:documentation></xs:annotation></xs:attribute>
+        <xs:attribute name="allowedMaxRetryTimes" type="dep:LETen1" default="5"><xs:annotation><xs:documentation>最大允许重试的次数。</xs:documentation></xs:annotation></xs:attribute>
+        <xs:attribute name="receiptRequired" type="xs:boolean" default="false"><xs:annotation><xs:documentation>是否需要回执。</xs:documentation></xs:annotation></xs:attribute>
+        <xs:attribute name="contextKeyToken" type="dep:NotEmptyString" use="required"><xs:annotation><xs:documentation>上下文加密令牌。</xs:documentation></xs:annotation></xs:attribute>
+    </xs:complexType>
+    
+    <xs:complexType name="Messaging">
+        <xs:annotation><xs:documentation>DEP 消息相关。</xs:documentation></xs:annotation>
+        <xs:all minOccurs="1" maxOccurs="1">
+            <xs:element name="sign" minOccurs="1">
+                <xs:annotation><xs:documentation>消息电子签名。</xs:documentation></xs:annotation>
+                <xs:complexType>
+                    <xs:simpleContent>
+                        <xs:extension base="dep:NotEmptyString"></xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="exchangePaths" minOccurs="1">
+                <xs:annotation><xs:documentation>数据交换路径。</xs:documentation></xs:annotation>
+                <xs:complexType>
+                    <xs:sequence minOccurs="1" maxOccurs="1">
+                        <xs:element name="add" minOccurs="1" maxOccurs="unbounded">
+                            <xs:annotation><xs:documentation>数据交换路径。</xs:documentation></xs:annotation>
+                            <xs:complexType>
+                                <xs:sequence minOccurs="1" maxOccurs="unbounded">
+                                    <xs:element name="endpoint">
+                                        <xs:annotation><xs:documentation>终结点。</xs:documentation></xs:annotation>
+                                        <xs:complexType>
+                                            <xs:all minOccurs="1">
+                                                <xs:element name="main" type="dep:Endpoint" minOccurs="1">
+                                                    <xs:annotation><xs:documentation>消息主发节点。</xs:documentation></xs:annotation>
+                                                </xs:element>
+                                                <xs:element name="receipt" type="dep:Endpoint" minOccurs="0">
+                                                    <xs:annotation><xs:documentation>回执消息节点。</xs:documentation></xs:annotation>
+                                                </xs:element>
+                                                <xs:element name="backup" type="dep:Endpoint" minOccurs="0">
+                                                    <xs:annotation><xs:documentation>当超出最大重试次数后，选择的备选节点。</xs:documentation></xs:annotation>
+                                                </xs:element>
+                                            </xs:all>
+                                            <xs:attribute name="sortId" use="required" type="xs:int"><xs:annotation><xs:documentation>终结点自动排序标识。</xs:documentation></xs:annotation></xs:attribute>
+                                        </xs:complexType>
+                                    </xs:element>
+                                </xs:sequence>
+                                <xs:attribute name="id" type="xs:int"><xs:annotation><xs:documentation>数据交换路径标识。</xs:documentation></xs:annotation></xs:attribute>
+                                <xs:attribute name="description" type="xs:string"><xs:annotation><xs:documentation>数据交换路径描述。</xs:documentation></xs:annotation></xs:attribute>
+                            </xs:complexType>
+                            <xs:unique name="UniqueEndpointSortIdConstraint">
+                                <xs:selector xpath="./dep:endpoint"></xs:selector>
+                                <xs:field xpath="@sortId"></xs:field>
+                            </xs:unique>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+                <xs:unique name="UniqueExchangePathConstraint">
+                    <xs:selector xpath="./dep:add"></xs:selector>
+                    <xs:field xpath="@id"></xs:field>
+                </xs:unique>
+            </xs:element>
+            <xs:element name="content">
+                <xs:annotation><xs:documentation>DEP 消息内容主体。</xs:documentation></xs:annotation>
+                <xs:complexType>
+                    <xs:simpleContent>
+                        <xs:extension base="dep:NotEmptyString"></xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+            </xs:element>
+        </xs:all>
+    </xs:complexType>
+    
+    <xs:element name="dep">
+        <xs:complexType>
+            <xs:all minOccurs="1" maxOccurs="1">
+                <xs:element name="summary" type="dep:MessageSummary" minOccurs="1"></xs:element>
+                <xs:element name="details" type="dep:Messaging" minOccurs="1"></xs:element>
+            </xs:all>
+        </xs:complexType>
+    </xs:element>
+    
+</xs:schema>
