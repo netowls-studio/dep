@@ -76,6 +76,8 @@
         <xs:attribute name="vHostName" type="dep:NotEmptyString" default="/"><xs:annotation><xs:documentation>RabbitMQ VHost 名称。</xs:documentation></xs:annotation></xs:attribute>
         <xs:attribute name="exchangeName" type="dep:NotEmptyString" default="dep-exchange.topic.journal"><xs:annotation><xs:documentation>RabbitMQ 交换机名称。</xs:documentation></xs:annotation></xs:attribute>
         <xs:attribute name="routingKey" type="dep:NotEmptyString" use="required"><xs:annotation><xs:documentation>RabbitMQ 路由标识。</xs:documentation></xs:annotation></xs:attribute>
+        <xs:attribute name="userName" type="dep:NotEmptyString" use="required"><xs:annotation><xs:documentation>RabbitMQ 用户名。</xs:documentation></xs:annotation></xs:attribute>
+        <xs:attribute name="password" type="dep:NotEmptyString" use="required"><xs:annotation><xs:documentation>RabbitMQ 密码。</xs:documentation></xs:annotation></xs:attribute>
     </xs:complexType>
     
     <xs:complexType name="Endpoint">
@@ -107,6 +109,7 @@
         <xs:attribute name="retriedTimes" type="dep:LETen1" default="0"><xs:annotation><xs:documentation>消息已经重试的次数。</xs:documentation></xs:annotation></xs:attribute>
         <xs:attribute name="allowedMaxRetryTimes" type="dep:LETen1" default="5"><xs:annotation><xs:documentation>最大允许重试的次数。</xs:documentation></xs:annotation></xs:attribute>
         <xs:attribute name="receiptRequired" type="xs:boolean" default="false"><xs:annotation><xs:documentation>是否需要回执。</xs:documentation></xs:annotation></xs:attribute>
+        <xs:attribute name="contextKeyToken" type="dep:NotEmptyString" use="required"><xs:annotation><xs:documentation>上下文加密令牌。</xs:documentation></xs:annotation></xs:attribute>
     </xs:complexType>
     
     <xs:complexType name="Messaging">
