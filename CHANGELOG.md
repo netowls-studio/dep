@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.0-alpha.11](https://github.com/netowls-studio/dep/compare/v1.0.0-alpha.10...v1.0.0-alpha.11) (2020-10-27)
+
+
+### New features
+
+* 新增消息信息接口。 ([e3789ba](https://github.com/netowls-studio/dep/commit/e3789ba2b55dab224241ad86058df9eb602397a0))
+
+
+### CI & CD
+
+* 新增服务器项目持续集成脚本。 ([c879afb](https://github.com/netowls-studio/dep/commit/c879afb7d3542d5d16edd03f1e74a9e0768683cd))
+
+
+### Tools
+
+* 修改了 MSBuild 配置文件版本号。 ([8093ea2](https://github.com/netowls-studio/dep/commit/8093ea2763368b80f43027bdeea16dea9a7923d4))
+
 ## [1.0.0-alpha.10](https://github.com/netowls-studio/dep/compare/v1.0.0-alpha.9...v1.0.0-alpha.10) (2020-10-27)
 
 
