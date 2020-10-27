@@ -2,6 +2,26 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.0-alpha.10](https://github.com/netowls-studio/dep/compare/v1.0.0-alpha.9...v1.0.0-alpha.10) (2020-10-27)
+
+
+### Documentations
+
+* 修改了代码规范文档。 ([348c849](https://github.com/netowls-studio/dep/commit/348c849b047f952649ced4b23668057063974142))
+
+
+### New features
+
+* 开始进行服务器编码。 ([b2f2c40](https://github.com/netowls-studio/dep/commit/b2f2c4085fdd198f2cff4f9d672f71cea7bb140e))
+* 为 XmlFormatMessagingSchema.xsd 增加了必要的定义。 ([18559bb](https://github.com/netowls-studio/dep/commit/18559bb7ec474734bd91078d5e43c770e7ce3d24))
+* 新增 Uri 消息。 ([188ce01](https://github.com/netowls-studio/dep/commit/188ce01aafcfed486db5167b8b09ccef7f203420))
+* 新增 XML 格式消息架构。 ([84b802b](https://github.com/netowls-studio/dep/commit/84b802b94c77266101e0b900e979a3ea31808e4a))
+* 新增 XML 格式消息架构文档。 ([54aead2](https://github.com/netowls-studio/dep/commit/54aead2fd653d124fe327ff671b8be966307bd43))
+* 新增消息构建器接口。 ([2b87437](https://github.com/netowls-studio/dep/commit/2b874377abbbd7e5fd3c71b4d535de8d558380fa))
+* 新增消息基本信息接口。 ([ade864a](https://github.com/netowls-studio/dep/commit/ade864aeb0f47a0acd74973d530b7876f3f1e6ab))
+* 新增消息类型枚举。 ([d690316](https://github.com/netowls-studio/dep/commit/d690316a11e5da04e339e508dc49b12b9569a0dc))
+* 修改了消息类型枚举。 ([8bcfe34](https://github.com/netowls-studio/dep/commit/8bcfe34d0d8f6a867e84e22c93bf88040f26cedb))
+
 ## [1.0.0-alpha.9](https://github.com/netowls-studio/dep/compare/v1.0.0-alpha.8...v1.0.0-alpha.9) (2020-10-26)
 
 
