@@ -16,9 +16,16 @@ using NetowlsStudio.Dep.Runtime.Serializations;
 namespace NetowlsStudio.Dep.Messaging
 {
     /// <summary> 定义了消息信息的接口。 </summary>
+    /// <seealso cref="ISerializableObject" />
+    public interface IMessage : ISerializableObject
+    {
+    }
+
+    /// <summary> 定义了消息信息的接口。 </summary>
     /// <typeparam name="TData"> 消息数据类型。 </typeparam>
     /// <seealso cref="ISerializableObject" />
-    public interface IMessage<TData> : ISerializableObject
+    /// <seealso cref="IMessage" />
+    public interface IMessage<TData> : IMessage
     {
         /// <summary> 消息数据。 </summary>
         /// <value> 设置或获取 <typeparamref name="TData" /> 类型的对象实例或值，用于表示消息数据。 </value>
