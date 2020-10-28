@@ -6,6 +6,10 @@
 
 
 
+![DEP](./docs/Feature.png)
+
+
+
 ![GitHub issues](https://img.shields.io/github/issues/netowls-studio/dep?label=Issues&logo=github&style=flat-square) ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/netowls-studio/dep?label=Commits&logo=github&style=flat-square) ![GitHub last commit](https://img.shields.io/github/last-commit/netowls-studio/dep?label=Latest%20Commit&logo=github&style=flat-square) ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/netowls-studio/dep?label=Size&logo=github&style=flat-square) ![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/netowls-studio/dep?include_prereleases&label=Latest%20Release&logo=github&style=flat-square)
 
 
@@ -39,9 +43,6 @@
     | Docker                        |                                                              | ***推荐且优先实现***      |
     | Microsoft .NET SDK or Runtime |                                                              | ***非必要***              |
 
-- **架构设计 - Architecture**
-
-  <img src="./docs/DEP 架构设计.png" alt="架构设计" style="zoom:30%;" />
 
 - **文档 - Documentation**
 
