@@ -24,10 +24,10 @@ namespace NetowlsStudio.Dep
     public class DepException : Exception
     {
         /// <summary> 异常信息模板。 </summary>
-        public const string MessageTemplate = "DEP 异常：{0}";
+        public const string MessageTemplate = "DEP 异常：{0}。";
 
         /// <summary> 默认异常信息。 </summary>
-        public static readonly string DefaultMessage = string.Format(MessageTemplate, "引发了未处理的异常。");
+        public static readonly string DefaultMessage = string.Format(MessageTemplate, "引发了未处理的异常");
 
         /// <summary> 用于初始化一个 <see cref="DepException" /> 类型的对象实例。 </summary>
         public DepException()
