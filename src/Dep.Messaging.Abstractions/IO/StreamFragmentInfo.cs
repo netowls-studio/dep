@@ -13,12 +13,14 @@
 
 using NetowlsStudio.Dep.Runtime.Serializations.Providers;
 using Newtonsoft.Json;
+using System;
 using System.Xml;
 using System.Xml.Serialization;
 
 namespace NetowlsStudio.Dep.Messaging.IO
 {
     /// <summary> 提供了流分片信息相关的方法。 </summary>
+    [Serializable]
     public class StreamFragmentInfo
     {
         /// <summary> 用于初始化一个 <see cref="StreamFragmentInfo" /> 类型的对象实例。 </summary>

@@ -7,3 +7,5 @@ using System.Diagnostics.CodeAnalysis;
 
 [assembly: SuppressMessage("Usage", "CA2235:Mark all non-serializable fields", Justification = "<挂起>", Scope = "member", Target = "~P:NetowlsStudio.Dep.Messaging.UriMessage.Uri")]
 [assembly: SuppressMessage("Microsoft.Design", "InterfaceViolations:Exception(s) thrown but not declared in interface", Justification = "<挂起>", Scope = "member", Target = "~M:NetowlsStudio.Dep.Messaging.IO.StreamSlicer.Split(System.IO.Stream)~System.Collections.Generic.IEnumerable{NetowlsStudio.Dep.Messaging.IO.StreamFragmentInfo}")]
+[assembly: SuppressMessage("Usage", "CA2235:Mark all non-serializable fields", Justification = "<挂起>", Scope = "member", Target = "~P:NetowlsStudio.Dep.Messaging.IO.FileStreamFragmentInfo.FileName")]
+[assembly: SuppressMessage("Usage", "CA2235:Mark all non-serializable fields", Justification = "<挂起>", Scope = "member", Target = "~P:NetowlsStudio.Dep.Messaging.IO.FileStreamFragmentInfo.Path")]
