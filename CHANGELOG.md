@@ -2,6 +2,26 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.0-alpha.13](https://github.com/netowls-studio/dep/compare/v1.0.0-alpha.12...v1.0.0-alpha.13) (2020-10-29)
+
+
+### ⚠ BREAKING CHANGES
+
+* 对流消息相关代码进行重构。
+
+### Refactor
+
+* 对流消息相关代码进行重构。 ([033cc29](https://github.com/netowls-studio/dep/commit/033cc29d4a2f73db024fad44f6870a63f2929db6))
+
+
+### New features
+
+* 新增 IO 流拆分接口。 ([15bb485](https://github.com/netowls-studio/dep/commit/15bb4851d8b5134f3bb96f8ce3d45b96a0425469))
+* 新增 IO 流分包基础类。 ([715fe4d](https://github.com/netowls-studio/dep/commit/715fe4db30f1b6788778bf5a03b1fa971c8b2485))
+* 新增流消息摘要信息。 ([6d5536f](https://github.com/netowls-studio/dep/commit/6d5536f205266daf8af641071719d6e5fdf820e7))
+* 新增数据包信息。 ([7feb921](https://github.com/netowls-studio/dep/commit/7feb921457e0690445ccbded42e4166bf3e4aedb))
+* 新增文件流摘要信息。 ([c33397a](https://github.com/netowls-studio/dep/commit/c33397a5c0d311ee77ce36f06650ddb2fddd5519))
+
 ## [1.0.0-alpha.12](https://github.com/netowls-studio/dep/compare/v1.0.0-alpha.11...v1.0.0-alpha.12) (2020-10-29)
 
 
