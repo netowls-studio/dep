@@ -44,7 +44,7 @@ namespace NetowlsStudio.Dep.Messaging.IO
 
         /// <summary> 包数据。 </summary>
         /// <value> 设置或获取 <see cref="byte" /> 类型的数组，用于表示包数据。 </value>
-        [XmlArray(ElementName = "packageData", Namespace = XmlSerializerNamespaceDefaults.Uri), XmlArrayItem(ElementName = "item", Namespace = XmlSerializerNamespaceDefaults.Uri)]
+        [XmlArray(ElementName = "/", Namespace = XmlSerializerNamespaceDefaults.Uri), XmlArrayItem(ElementName = "item", Namespace = XmlSerializerNamespaceDefaults.Uri)]
         [JsonProperty("packageData")]
         public virtual byte[] Data { get; set; }
 
