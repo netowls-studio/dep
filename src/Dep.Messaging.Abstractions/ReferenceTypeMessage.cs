@@ -22,7 +22,7 @@ namespace NetowlsStudio.Dep.Messaging
     /// <seealso cref="Message{TData}" />
     [Serializable, XmlRoot(ElementName = XmlRootElementName, Namespace = XmlSerializerNamespaceDefaults.Uri)]
     public class ReferenceTypeMessage<T> : Message<T>
-        where T : class, new()
+        where T : class
     {
         /// <summary> 用于初始化一个 <see cref="ReferenceTypeMessage{T}" /> 类型的对象实例。 </summary>
         public ReferenceTypeMessage()
