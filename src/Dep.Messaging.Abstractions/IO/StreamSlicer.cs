@@ -11,6 +11,7 @@
  * ********************************************************************************************
  */
 
+using NetowlsStudio.Dep.Annotations;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -20,6 +21,7 @@ namespace NetowlsStudio.Dep.Messaging.IO
 {
     /// <summary> 提供了分割流相关的方法。 </summary>
     /// <seealso cref="IStreamSlicer" />
+    [InjectionName(nameof(StreamSlicer))]
     public class StreamSlicer : IStreamSlicer
     {
         /// <summary> 每个分片的大小：2048 字节。 </summary>
