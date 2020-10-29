@@ -12,6 +12,7 @@
  */
 
 using NetowlsStudio.Dep.Runtime.Serializations.Providers;
+using Newtonsoft.Json;
 using System;
 using System.Xml.Serialization;
 
@@ -39,5 +40,10 @@ namespace NetowlsStudio.Dep.Messaging
             if (string.IsNullOrWhiteSpace(uri))
                 throw new ArgumentNullException(nameof(uri), string.Format(DepException.MessageTemplate, "未提供有效的 URI 地址"));
         }
+
+        /// <summary> URI 地址。 </summary>
+        /// <value> 获取一个字符串，用于表示 URI 地址。 </value>
+        [XmlIgnore, JsonIgnore]
+        public string Uri => base.MessageData;
     }
 }
