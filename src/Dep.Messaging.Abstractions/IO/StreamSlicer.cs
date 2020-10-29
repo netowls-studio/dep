@@ -40,23 +40,7 @@ namespace NetowlsStudio.Dep.Messaging.IO
         /// <exception cref="ArgumentNullException"> </exception>
         /// <exception cref="IOException"> </exception>
         /// <exception cref="ObjectDisposedException"> </exception>
-        public virtual IEnumerable<StreamFragmentInfo> Split(Stream stream)
-        {
-            ThrowIfStreamIsNotSupport(stream);
-            ThrowIfStreamCannotRead(stream);
-            var fragments = new List<StreamFragmentInfo>();
-            var buffer = new byte[BufferSize];
-            var readSize = stream.Read(buffer, 0, BufferSize);
-            while (readSize > 0)
-            {
-                using (var bufferStream = new MemoryStream(buffer, 0, readSize))
-                {
-                    fragments.Add(CreateFragment(fragments.Count + 1, stream.Length, bufferStream.ToArray()));
-                }
-                readSize = stream.Read(buffer, 0, BufferSize);
-            }
-            return fragments;
-        }
+        public virtual IEnumerable<StreamFragmentInfo> Split(Stream stream) => InternalSplit(stream);
 
         /// <summary> (异步的方法) 分割流 <paramref name="stream" />。 </summary>
         /// <param name="stream"> 派生自 <see cref="Stream" /> 类型的对象实例。 </param>
@@ -94,6 +78,31 @@ namespace NetowlsStudio.Dep.Messaging.IO
                                                             params object[] additions)
         {
             return new StreamFragmentInfo(index, totalLength, fragmentData);
+        }
+
+        /// <summary> 分割流 <paramref name="stream" />。 </summary>
+        /// <param name="stream"> 派生自 <see cref="Stream" /> 类型的对象实例。 </param>
+        /// <returns> <see cref="StreamFragmentInfo" /> 类型的对象实例集合。 </returns>
+        /// <seealso cref="IEnumerable{T}" />
+        /// <seealso cref="StreamFragmentInfo" />
+        /// <exception cref="ObjectDisposedException"> </exception>
+        /// <exception cref="IOException"> </exception>
+        protected virtual IEnumerable<StreamFragmentInfo> InternalSplit(Stream stream)
+        {
+            ThrowIfStreamIsNotSupport(stream);
+            ThrowIfStreamCannotRead(stream);
+            var fragments = new List<StreamFragmentInfo>();
+            var buffer = new byte[BufferSize];
+            var readSize = stream.Read(buffer, 0, BufferSize);
+            while (readSize > 0)
+            {
+                using (var bufferStream = new MemoryStream(buffer, 0, readSize))
+                {
+                    fragments.Add(CreateFragment(fragments.Count + 1, stream.Length, bufferStream.ToArray()));
+                }
+                readSize = stream.Read(buffer, 0, BufferSize);
+            }
+            return fragments;
         }
 
         /// <summary> 用于校验流 <paramref name="stream" /> 是否可读。如果不可读，则抛出 <see cref="IOException" /> 类型的异常。 </summary>
