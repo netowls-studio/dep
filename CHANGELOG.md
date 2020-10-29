@@ -2,6 +2,62 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.0-alpha.13](https://github.com/netowls-studio/dep/compare/v1.0.0-alpha.12...v1.0.0-alpha.13) (2020-10-29)
+
+
+### ⚠ BREAKING CHANGES
+
+* 对流消息相关代码进行重构。
+
+### Refactor
+
+* 对流消息相关代码进行重构。 ([033cc29](https://github.com/netowls-studio/dep/commit/033cc29d4a2f73db024fad44f6870a63f2929db6))
+
+
+### New features
+
+* 新增 IO 流拆分接口。 ([15bb485](https://github.com/netowls-studio/dep/commit/15bb4851d8b5134f3bb96f8ce3d45b96a0425469))
+* 新增 IO 流分包基础类。 ([715fe4d](https://github.com/netowls-studio/dep/commit/715fe4db30f1b6788778bf5a03b1fa971c8b2485))
+* 新增流消息摘要信息。 ([6d5536f](https://github.com/netowls-studio/dep/commit/6d5536f205266daf8af641071719d6e5fdf820e7))
+* 新增数据包信息。 ([7feb921](https://github.com/netowls-studio/dep/commit/7feb921457e0690445ccbded42e4166bf3e4aedb))
+* 新增文件流摘要信息。 ([c33397a](https://github.com/netowls-studio/dep/commit/c33397a5c0d311ee77ce36f06650ddb2fddd5519))
+
+## [1.0.0-alpha.12](https://github.com/netowls-studio/dep/compare/v1.0.0-alpha.11...v1.0.0-alpha.12) (2020-10-29)
+
+
+### Documentations
+
+* 修改了架构设计图。 ([b40373e](https://github.com/netowls-studio/dep/commit/b40373e78ec8d119c6ea17758d7ebc44335f1ede))
+
+
+### Bugs fixed
+
+* 取消了 ReferenceTypeMessage 中对于泛型 T 的 new() 约束。 ([25c4c35](https://github.com/netowls-studio/dep/commit/25c4c3587fd59600b9a21497d1ea92bb9795a869))
+
+
+### Refactor
+
+* 对流分片程序进行了重构。 ([90981e7](https://github.com/netowls-studio/dep/commit/90981e7c503f773590e5339caaa024442accdd07))
+
+
+### New features
+
+* 调整解决方案的结构。 ([34cc89c](https://github.com/netowls-studio/dep/commit/34cc89c1cf269739dd70f3d2ec1bb2737ce912b6))
+* 为 IStreamSlicer 接口增加了异步方法。 ([29d3087](https://github.com/netowls-studio/dep/commit/29d3087559cea5eaf3d071abfa5c73e6720deb17))
+* 为流分割基础程序 StreamSlicer 增加服务注入名称特性。 ([e6d61b3](https://github.com/netowls-studio/dep/commit/e6d61b39d0be20d0cb9c28fc761e3ef05a71aa30))
+* 新增 URI 消息构建器。 ([aec20e9](https://github.com/netowls-studio/dep/commit/aec20e9857c1e153c9855affebcfa398e6d9ac54))
+* 新增包含了 URI 地址的消息。 ([cb6c610](https://github.com/netowls-studio/dep/commit/cb6c61010e491923926fb518aaf335d8c763de49))
+* 新增流分割基类。 ([eddb682](https://github.com/netowls-studio/dep/commit/eddb6824f2e2e8f7f6c9f7e4f8c75241eac51c2a))
+* 新增流分割接口。 ([13158af](https://github.com/netowls-studio/dep/commit/13158af942bbd087c669b8eb58a708051ac993a3))
+* 新增流分片数据信息。 ([b790415](https://github.com/netowls-studio/dep/commit/b790415194a08bc8c18f24d4dbef53b128dee247))
+* 新增文件流分割程序。 ([551c086](https://github.com/netowls-studio/dep/commit/551c0865faa1030b8433d3df225e9cae7b2053b2))
+* 新增文件流分片信息。 ([8d28798](https://github.com/netowls-studio/dep/commit/8d287987b77d060941256bbfc69e9b132bad0e49))
+* 新增消息构建器基类。 ([27afba3](https://github.com/netowls-studio/dep/commit/27afba3e8ac2b6f778d003bfa51d2ce151d596e8))
+* 新增消息构建器接口。 ([23ec64b](https://github.com/netowls-studio/dep/commit/23ec64b3dd16a3923d04d25e6f864b8e02b996e3))
+* 新增消息基类。 ([9ce9aa3](https://github.com/netowls-studio/dep/commit/9ce9aa3f5623e841c2b9246655d67a29a74ad349))
+* 新增引用类型（类）的消息。 ([3064e80](https://github.com/netowls-studio/dep/commit/3064e805917906f779695a3b499f056a8bc44848))
+* 新增值类型消息基类。 ([348e4ff](https://github.com/netowls-studio/dep/commit/348e4ff630dba3de44dcbc4d9f7fe69572ca237e))
+
 ## [1.0.0-alpha.11](https://github.com/netowls-studio/dep/compare/v1.0.0-alpha.10...v1.0.0-alpha.11) (2020-10-27)
 
 

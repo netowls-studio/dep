@@ -6,3 +6,6 @@
 using System.Diagnostics.CodeAnalysis;
 
 [assembly: SuppressMessage("Usage", "CA2235:Mark all non-serializable fields", Justification = "<挂起>", Scope = "member", Target = "~P:NetowlsStudio.Dep.Messaging.UriMessage.Uri")]
+[assembly: SuppressMessage("Usage", "CA2235:Mark all non-serializable fields", Justification = "<挂起>", Scope = "member", Target = "~P:NetowlsStudio.Dep.Messaging.IO.StreamSummary.PackageId")]
+[assembly: SuppressMessage("Usage", "CA2235:Mark all non-serializable fields", Justification = "<挂起>", Scope = "member", Target = "~P:NetowlsStudio.Dep.Messaging.IO.FileStreamSummary.FileName")]
+[assembly: SuppressMessage("Usage", "CA2235:Mark all non-serializable fields", Justification = "<挂起>", Scope = "member", Target = "~P:NetowlsStudio.Dep.Messaging.IO.FileStreamSummary.Extensions")]
