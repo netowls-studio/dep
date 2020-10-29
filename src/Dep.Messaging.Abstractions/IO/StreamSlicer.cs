@@ -42,10 +42,8 @@ namespace NetowlsStudio.Dep.Messaging.IO
         /// <exception cref="ObjectDisposedException"> </exception>
         public virtual IEnumerable<StreamFragmentInfo> Split(Stream stream)
         {
-            if (stream is null)
-                throw new ArgumentNullException(nameof(stream), string.Format(DepException.MessageTemplate, $"无效的 IO 流 @{nameof(stream)}"));
-            if (!stream.CanRead)
-                throw new IOException(string.Format(DepException.MessageTemplate, $"IO 流 @{nameof(stream)} 不可读"));
+            ThrowIfStreamIsNotSupport(stream);
+            ThrowIfStreamCannotRead(stream);
             var fragments = new List<StreamFragmentInfo>();
             var buffer = new byte[BufferSize];
             var readSize = stream.Read(buffer, 0, BufferSize);
@@ -53,7 +51,7 @@ namespace NetowlsStudio.Dep.Messaging.IO
             {
                 using (var bufferStream = new MemoryStream(buffer, 0, readSize))
                 {
-                    fragments.Add(new StreamFragmentInfo(fragments.Count + 1, stream.Length, bufferStream.ToArray()));
+                    fragments.Add(CreateFragment(fragments.Count + 1, stream.Length, bufferStream.ToArray()));
                 }
                 readSize = stream.Read(buffer, 0, BufferSize);
             }
@@ -81,6 +79,46 @@ namespace NetowlsStudio.Dep.Messaging.IO
                     return new Tuple<IEnumerable<StreamFragmentInfo>, Exception>(null, error);
                 }
             });
+        }
+
+        /// <summary> 创建一个分片信息。 </summary>
+        /// <param name="index"> 分片索引数字。 </param>
+        /// <param name="totalLength"> 流总长度。 </param>
+        /// <param name="fragmentData"> 分片数据。 </param>
+        /// <param name="additions"> 附加参数。 </param>
+        /// <returns> 派生自 <see cref="StreamFragmentInfo" /> 类型的对象实例。 </returns>
+        /// <seealso cref="StreamFragmentInfo" />
+        protected virtual StreamFragmentInfo CreateFragment(int index,
+                                                            long totalLength,
+                                                            byte[] fragmentData,
+                                                            params object[] additions)
+        {
+            return new StreamFragmentInfo(index, totalLength, fragmentData);
+        }
+
+        /// <summary> 用于校验流 <paramref name="stream" /> 是否可读。如果不可读，则抛出 <see cref="IOException" /> 类型的异常。 </summary>
+        /// <param name="stream">
+        /// 需要校验的流。
+        /// <para> 派生自 <see cref="Stream" /> 类型的对象实例。 </para>
+        /// </param>
+        /// <seealso cref="Stream" />
+        /// <exception cref="IOException"> </exception>
+        protected void ThrowIfStreamCannotRead(Stream stream)
+        {
+            if (!stream.CanRead)
+                throw new IOException(string.Format(DepException.MessageTemplate, $"IO 流 @{nameof(stream)} 不可读"));
+        }
+
+        /// <summary> 用于校验流 <paramref name="stream" /> 是否等于 <c> null </c>。如果等于 <c> null </c>，则抛出 <see cref="ArgumentNullException" /> 类型的异常。 </summary>
+        /// <param name="stream">
+        /// 需要校验的流。
+        /// <para> 派生自 <see cref="Stream" /> 类型的对象实例。 </para>
+        /// </param>
+        /// <seealso cref="Stream" />
+        protected void ThrowIfStreamIsNotSupport(Stream stream)
+        {
+            if (stream is null)
+                throw new ArgumentNullException(nameof(stream), string.Format(DepException.MessageTemplate, $"无效的 IO 流 @{nameof(stream)}"));
         }
     }
 }
