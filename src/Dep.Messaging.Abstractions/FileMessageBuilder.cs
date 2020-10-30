@@ -57,5 +57,17 @@ namespace NetowlsStudio.Dep.Messaging
         public override IEnumerable<StreamingMessage> Build() => Splitter.Split()
                                                                          .Select(item => new FileMessage() { MessageData = item as FileStreamSummary })
                                                                          .ToArray();
+
+        /// <summary> 设置 IO 流分片程序。 </summary>
+        /// <param name="splitter"> 实现了 <see cref="IStreamSplitter" /> 类型接口的对象实例。 </param>
+        /// <returns> 实现了 <see cref="IStreamingMessageBuilder" /> 类型接口的对象实例。 </returns>
+        /// <seealso cref="IStreamingMessageBuilder" />
+        /// <seealso cref="IStreamSplitter" />
+        /// <exception cref="NotImplementedException"></exception>
+        [Obsolete("FileMessageBuilder 尚未实现此方法！", true)]
+        public override IStreamingMessageBuilder WithSplitter(IStreamSplitter splitter)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

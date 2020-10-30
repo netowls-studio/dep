@@ -80,7 +80,7 @@ namespace NetowlsStudio.Dep.Messaging
         /// <returns> 实现了 <see cref="IStreamingMessageBuilder" /> 类型接口的对象实例。 </returns>
         /// <seealso cref="IStreamingMessageBuilder" />
         /// <seealso cref="IStreamSplitter" />
-        public IStreamingMessageBuilder WithSplitter(IStreamSplitter splitter)
+        public virtual IStreamingMessageBuilder WithSplitter(IStreamSplitter splitter)
         {
             m_splitter = splitter;
             return this;
