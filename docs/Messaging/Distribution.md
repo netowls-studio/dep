@@ -1,0 +1,74 @@
+![DEP](../../assets/Icons/Dep-128.png)
+
+# **数据分发消息**
+
+```json
+{
+  "header": {
+    "message-type": "Distribution",
+    "message-typeid": 1,
+    "publish-time": "2020-10-30 12:15:54",
+    "group-id": "System",
+    "message-id": "",
+    "subscriber-id": "",
+    "reissue-request-token": "",
+    "reissue-request-token-expires": 1,
+    "size": 1,
+    "receipt-required": true,
+    "signature": "",
+    "encoding": "UTF-8",
+    "is-split": true,
+    "packages-number": 2,
+    "package-index": 1,
+    "package-combine-id": "",
+    "serializer": "JsonSerializer",
+    "retried-times": 0,
+    "allow-maximum-retry-times": 5,
+    "paths": {
+      "distribute-path": [
+        {
+          "http": {
+            "uri": ""
+          },
+          "is-destination": false,
+          "is-transition": true,
+          "message-queue": {
+            "rabbit-mq": {
+              "server-id": "",
+              "exchange-name": "",
+              "routing-key": ""
+            }
+          }
+        }
+      ],
+      "receipt-path": [
+        {
+          "http": {
+            "uri": ""
+          },
+          "is-destination": false,
+          "is-transition": true,
+          "message-queue": {
+            "rabbit-mq": {
+              "server-id": "",
+              "exchange-name": "",
+              "routing-key": ""
+            }
+          }
+        }
+      ]
+    }
+  },
+  "body": "BASE-64 编码的消息"
+}
+
+```
+
+
+
+
+
+----
+
+![DEP](../../assets/Icons/Dep-64.png)
+

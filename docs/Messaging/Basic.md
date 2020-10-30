@@ -38,7 +38,7 @@
   - **状态同步类消息 StateSynchronized**
     - **[DEP 群集](./Cluster-StateSynchronized.md)**
     - **[DEP 数据维护](./Data-Maintenance.md)**
-  - 
+  - **[DEP 数据分发消息](./Distribution.md)**
 
 
 
