@@ -2,6 +2,31 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.0-alpha.14](https://github.com/netowls-studio/dep/compare/v1.0.0-alpha.13...v1.0.0-alpha.14) (2020-10-30)
+
+
+### Refactor
+
+* 重构了 IStreamingMessageBuilder 接口。 ([cbc15c7](https://github.com/netowls-studio/dep/commit/cbc15c7a980c30ee39d15fdd1fc0ef6ba36201d8))
+
+
+### New features
+
+* 为 FileStreamSplitter 增加新的构造函数。 ([d37f6b4](https://github.com/netowls-studio/dep/commit/d37f6b4b2ad20dc1bd5b8e5d13c710cc7cbbe47f))
+* 新增 IO 流相关消息。 ([2fde18f](https://github.com/netowls-studio/dep/commit/2fde18f51980d2da53b262c5beaaae148ce23043))
+* 新增 IO 流消息构建接口。 ([09a61e5](https://github.com/netowls-studio/dep/commit/09a61e5ffda5ac09130304417e03079504c4dde7))
+* 新增操作文件流的内部方法。 ([dbbc215](https://github.com/netowls-studio/dep/commit/dbbc215908c008e75ee2f02923bfd788c8231f12))
+* 新增构建 IO 流相关消息的基类。 ([1c75db9](https://github.com/netowls-studio/dep/commit/1c75db9c00be94ff257ec1430289705348f96342))
+* 新增文件流分割程序。 ([133e6ad](https://github.com/netowls-studio/dep/commit/133e6ad1fc1f285d1aad8caa2f83258a780243f0))
+* 新增文件消息构建程序。 ([a6fb719](https://github.com/netowls-studio/dep/commit/a6fb7195b388145cb7891d213987476a4bc2e5ea))
+* 新增文件型消息。 ([b60e716](https://github.com/netowls-studio/dep/commit/b60e71664438a2edf6bf5f64a481a90731f8e3fb))
+* 重写了 FileMessageBuilder.WithSplitter 方法。 ([5d7f204](https://github.com/netowls-studio/dep/commit/5d7f2044e837263de13dfdeb6d839327a5b1a907))
+
+
+### Tools
+
+* 修改了 .NET 构建版本号。 ([d95036c](https://github.com/netowls-studio/dep/commit/d95036c3c1001b74eb05fa873d99492e10f2eb13))
+
 ## [1.0.0-alpha.13](https://github.com/netowls-studio/dep/compare/v1.0.0-alpha.12...v1.0.0-alpha.13) (2020-10-29)
 
 
