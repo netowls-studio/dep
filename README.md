@@ -52,6 +52,7 @@
   | [构建状态 - Build State](./docs/Build-Status.md)             |
   | [代码约定 - Code Standard](./docs/Code-Standard.md)          |
   | [NuGet 包依赖 - NuGet Package Dependency](./docs/NuPackage-Dependency.md) |
+  | [DEP 消息结构说明](./docs/Messaging/Basic.md)                |
 
 - **协议 - License**
 
