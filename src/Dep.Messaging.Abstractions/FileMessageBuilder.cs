@@ -65,7 +65,9 @@ namespace NetowlsStudio.Dep.Messaging
         /// <seealso cref="IStreamSplitter" />
         /// <exception cref="NotImplementedException"></exception>
         [Obsolete("FileMessageBuilder 尚未实现此方法！", true)]
+#pragma warning disable CS0809 // 过时成员重写未过时成员
         public override IStreamingMessageBuilder WithSplitter(IStreamSplitter splitter)
+#pragma warning restore CS0809 // 过时成员重写未过时成员
         {
             throw new NotImplementedException();
         }
