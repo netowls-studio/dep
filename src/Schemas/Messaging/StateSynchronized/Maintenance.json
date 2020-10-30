@@ -1,0 +1,25 @@
+{
+  "header": {
+    "message-type": "Maintenance",
+    "message-typeid": 1,
+    "publish-time": "2020-10-30 12:15:54",
+    "group-id": "System"
+  },
+  "body": {
+    "changed-data-state": [
+      {
+        "collection-name": "",
+        "changed-entities": [
+          {
+            "action": "CreateNew | Update | Delete | Remove",
+            "data": {}
+          }
+        ]
+      }
+    ],
+    "exec-member": {
+      "host-ip": "",
+      "api-port": 10000
+    }
+  }
+}
