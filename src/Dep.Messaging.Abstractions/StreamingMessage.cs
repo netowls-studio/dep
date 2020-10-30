@@ -12,7 +12,9 @@
  */
 
 using NetowlsStudio.Dep.Messaging.IO;
+using Newtonsoft.Json;
 using System;
+using System.Xml.Serialization;
 
 namespace NetowlsStudio.Dep.Messaging
 {
@@ -30,6 +32,7 @@ namespace NetowlsStudio.Dep.Messaging
         /// <summary> IO 流摘要信息。 </summary>
         /// <value> 获取 <see cref="StreamSummary" /> 类型的对象实例，用于表示 IO 流摘要信息。 </value>
         /// <seealso cref="StreamSummary" />
+        [JsonIgnore, XmlIgnore]
         public virtual StreamSummary StreamInfo => MessageData;
     }
 }
