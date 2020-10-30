@@ -11,6 +11,7 @@
  * ********************************************************************************************
  */
 
+using System;
 using System.IO;
 
 namespace NetowlsStudio.Dep.Messaging.IO
@@ -29,6 +30,20 @@ namespace NetowlsStudio.Dep.Messaging.IO
         /// <param name="stream"> <see cref="FileStream" /> 类型的对象实例。 </param>
         public FileStreamSplitter(FileStream stream) : base(stream)
         {
+        }
+
+        /// <summary> 用于初始化一个 <see cref="FileStreamSplitter" /> 类型的对象实例。 </summary>
+        /// <param name="file"> 需要分割的文件信息。 </param>
+        public FileStreamSplitter(FileInfo file) : this(file, new Func<FileInfo, FileStream>(new InternalFileStreamHandler().OpenAndRead))
+        {
+        }
+
+        /// <summary> 用于初始化一个 <see cref="FileStreamSplitter" /> 类型的对象实例。 </summary>
+        /// <param name="file"> 需要分割的文件信息。 </param>
+        /// <param name="handler"> 读取文件流的方法。 </param>
+        public FileStreamSplitter(FileInfo file, Func<FileInfo, FileStream> handler) : this(handler?.Invoke(file))
+        {
+            m_file = file;
         }
 
         /// <summary> 创建包描述信息。 </summary>
