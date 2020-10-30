@@ -1,0 +1,18 @@
+{
+  "header": {
+    "message-type": "StateSynchronized",
+    "message-typeid": 1,
+    "publish-time": "2020-10-30 12:15:54",
+    "group-id": "System"
+  },
+  "body": {
+    "cluster-provider": "Zookeeper",
+    "memberships": [
+      {
+        "host-ip": "",
+        "api-port": 10000,
+        "role": "Server | Transition | Agent | Watcher"
+      }
+    ]
+  }
+}
