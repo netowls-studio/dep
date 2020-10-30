@@ -2,6 +2,30 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.0-alpha.15](https://github.com/netowls-studio/dep/compare/v1.0.0-alpha.14...v1.0.0-alpha.15) (2020-10-30)
+
+
+### ⚠ BREAKING CHANGES
+
+* 重构消息抽象模块。
+
+### Refactor
+
+* 重构消息模块。 ([ffb2e58](https://github.com/netowls-studio/dep/commit/ffb2e58bd11cda6c99559668f0b814bf7bde12a9))
+
+
+### New features
+
+* 新增基础消息结构定义。 ([fa71ac8](https://github.com/netowls-studio/dep/commit/fa71ac8974cb48aefb513d65922f99c328f92623))
+
+
+### Documentations
+
+* 新增群集状态同步消息描述文档。 ([f56acec](https://github.com/netowls-studio/dep/commit/f56acec39971bdb5986f384925dcec014d7efbb4))
+* 新增数据分发消息说明文档。 ([0456c7f](https://github.com/netowls-studio/dep/commit/0456c7f3e272cdd6a01aff50c854b558a8d1d1ca))
+* 新增维护性同步消息说明文档。 ([b49a1bb](https://github.com/netowls-studio/dep/commit/b49a1bb829b1115672675680d11bea45e9b0e0e3))
+* 增加消息结构说明文档。 ([093a1b4](https://github.com/netowls-studio/dep/commit/093a1b496fac28c37bffc7be7602240852098119))
+
 ## [1.0.0-alpha.14](https://github.com/netowls-studio/dep/compare/v1.0.0-alpha.13...v1.0.0-alpha.14) (2020-10-30)
 
 
