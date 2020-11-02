@@ -41,7 +41,7 @@
 
 - **参考文献**
   - *[分发或重试消息](./Distribution-Retry.md)*
-  - **点击下载**：*《[补发原因代码](../Assets/Reissue-Reason-Codes.xlsx)》*
+  - **点击下载**：*《[补发原因代码](../Assets/Reissue-Reason-Codes.pdf)》*
 
 
 
