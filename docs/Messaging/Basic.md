@@ -39,6 +39,7 @@
     - **[DEP 群集](./Cluster-StateSynchronized.md)**
     - **[DEP 数据维护](./Data-Maintenance.md)**
   - **[DEP 数据分发消息](./Distribution-Retry.md)**
+  - **[补发申请](./Reissue.md)**
 
 
 

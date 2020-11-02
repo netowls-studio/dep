@@ -1,0 +1,31 @@
+{
+  "header": {
+    "message-type": "Reissue",
+    "message-typeid": 1,
+    "publish-time": "2020-10-30 12:15:54",
+    "group-id": "System",
+    "subscriber-id": "",
+    "reissue-token": "",
+    "reason-code": "",
+    "reason-description": "",
+    "path": [
+      {
+        "http": {
+          "uri": ""
+        },
+        "is-destination": false,
+        "is-transition": true,
+        "message-queue": {
+          "rabbit-mq": {
+            "server-id": "",
+            "exchange-name": "",
+            "routing-key": ""
+          }
+        }
+      }
+    ]
+  },
+  "body": {
+    "source-message-id": ""
+  }
+}
