@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0; net45;</TargetFrameworks>
+    <AssemblyName>NetowlsStudio.Dep.Messaging.Abstractions</AssemblyName>
+    <RootNamespace>NetowlsStudio.Dep.Messaging</RootNamespace>
+  </PropertyGroup>
+
+  <Import Project="../MSBuild.Base.props" />
+  <Import Project="../MSBuild.NuGet.props" />
+
+</Project>
