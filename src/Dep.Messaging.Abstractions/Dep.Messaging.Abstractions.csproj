@@ -10,6 +10,7 @@
   <Import Project="../MSBuild.NuGet.props" />
   <ItemGroup>
     <ProjectReference Include="..\Dep.Common\Dep.Common.csproj" />
+    <ProjectReference Include="..\Dep.Runtime.Serialization.NewtonsoftJson\Dep.Runtime.Serialization.NewtonsoftJson.csproj" />
   </ItemGroup>
 
 </Project>
