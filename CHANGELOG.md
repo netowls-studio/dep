@@ -2,6 +2,41 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.0-alpha.16](https://github.com/netowls-studio/dep/compare/v1.0.0-alpha.15...v1.0.0-alpha.16) (2020-11-02)
+
+
+### ⚠ BREAKING CHANGES
+
+* 删除了 IMessageBody 接口定义。
+
+### Documentations
+
+* 说明文档重命名。 ([b64f2a3](https://github.com/netowls-studio/dep/commit/b64f2a370812555c02d2310f64dafdd9fd57e714))
+* 完善了数据分发消息说明文档。 ([eea0024](https://github.com/netowls-studio/dep/commit/eea0024b48cfbe9c3b0130bc5741d6a143aff80c))
+* 新增补发申请消息说明文档。 ([a468edb](https://github.com/netowls-studio/dep/commit/a468edb25cb8f597bde77916060ea593afabb5bb))
+* 新增补发原因编码说明文档。 ([00fa058](https://github.com/netowls-studio/dep/commit/00fa058ad8681728ff497236799f6065e23248ac))
+* 新增补发原因代码说明文档。 ([44d436d](https://github.com/netowls-studio/dep/commit/44d436daceb3fc70a740ab3f453d34e0a4b1445f))
+
+
+### Refactor
+
+* 删除了不合理的接口定义。 ([aa3c8a4](https://github.com/netowls-studio/dep/commit/aa3c8a4d24595abe572e3e9497a3a6eabfb0a599))
+* **IMessageBody:** 重构了消息内容接口定义。 ([a539ea2](https://github.com/netowls-studio/dep/commit/a539ea2fbffdafae8268e0dfd8a74d96f8234fb6))
+
+
+### New features
+
+* 新增回执枚举类型。 ([c7fef1e](https://github.com/netowls-studio/dep/commit/c7fef1e9e0d745d11f345b68a6a9cff39ad52dce))
+* 新增消息构建接口。 ([86eeee3](https://github.com/netowls-studio/dep/commit/86eeee312f54f192c98ac50fe8b4dc348e60156e))
+* 新增消息构建器抽象程序。 ([128d010](https://github.com/netowls-studio/dep/commit/128d01034b62be58ddea02edc19c86c210018b4c))
+* 新增消息接口。 ([1cb5ed1](https://github.com/netowls-studio/dep/commit/1cb5ed1b33ce68c8efd56fbc04943147d3b2e3c8))
+* 新增消息类型枚举。 ([5cc1402](https://github.com/netowls-studio/dep/commit/5cc140271ac4fec8666a3781124ee86b87d44c94))
+* 新增消息内容接口。 ([fc95d92](https://github.com/netowls-studio/dep/commit/fc95d92061b70a06adbdb0118d48ff78b4ffb1c1))
+* 新增消息头构建程序。 ([f02f3fa](https://github.com/netowls-studio/dep/commit/f02f3fa654f7617246ccc04daca2c95fb9665d76))
+* 新增消息头基类。 ([18d4294](https://github.com/netowls-studio/dep/commit/18d429475a32b2a7c80a958887f7b2fcd45e5c62))
+* 新增消息头接口。 ([c16c8a1](https://github.com/netowls-studio/dep/commit/c16c8a18ca6654b34695b163f7ad03ebe532e278))
+* 新增消息信息基类。 ([eff321a](https://github.com/netowls-studio/dep/commit/eff321a4daec7ba292298f50a54183d73a007f74))
+
 ## [1.0.0-alpha.15](https://github.com/netowls-studio/dep/compare/v1.0.0-alpha.14...v1.0.0-alpha.15) (2020-10-30)
 
 

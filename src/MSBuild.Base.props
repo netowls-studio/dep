@@ -1,6 +1,6 @@
 ﻿<Project>
   <PropertyGroup>
-    <Version>1.0.0.0-alpha.14</Version>
+    <Version>1.0.0.0-alpha.16</Version>
     <Authors>Wang Yucai</Authors>
     <Product>DEP</Product>
     <Description>"DEP" is an open source data exchange platform, or it should be called data exchange middleware. It is used to exchange dataset, files and etc. produced by different systems.</Description>
