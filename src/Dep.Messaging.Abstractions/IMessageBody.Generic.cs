@@ -20,6 +20,6 @@ namespace NetowlsStudio.Dep.Messaging
     {
         /// <summary> 消息内容。 </summary>
         /// <value> 设置或获取 <typeparamref name="TContent" /> 类型的对象实例或值，用于表示消息内容。 </value>
-        new TContent Content { get; set; }
+        TContent Content { get; set; }
     }
 }

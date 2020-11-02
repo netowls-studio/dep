@@ -16,8 +16,5 @@ namespace NetowlsStudio.Dep.Messaging
     /// <summary> 定义了消息内容的接口。 </summary>
     public interface IMessageBody
     {
-        /// <summary> 消息内容。 </summary>
-        /// <value> 设置或获取 <see cref="object" /> 类型的对象实例，用于表示消息内容。 </value>
-        object Content { get; set; }
     }
 }
