@@ -8,5 +8,8 @@
 
   <Import Project="../MSBuild.Base.props" />
   <Import Project="../MSBuild.NuGet.props" />
+  <ItemGroup>
+    <ProjectReference Include="..\Dep.Common\Dep.Common.csproj" />
+  </ItemGroup>
 
 </Project>
