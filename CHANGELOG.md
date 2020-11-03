@@ -2,6 +2,47 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.0-alpha.17](https://github.com/netowls-studio/dep/compare/v1.0.0-alpha.16...v1.0.0-alpha.17) (2020-11-03)
+
+
+### ⚠ BREAKING CHANGES
+
+* 重构消息订阅模块的所有接口。
+* IMessagePublisher 重命名，并调整命名空间。
+
+### Tools
+
+* 修改了 NuGet 包版本号。 ([0384d79](https://github.com/netowls-studio/dep/commit/0384d79bb6b06c6ec69bf0710087d59e14ea3436))
+
+
+### Documentations
+
+* 修改了代码规范说明文档。 ([0c80aa1](https://github.com/netowls-studio/dep/commit/0c80aa1dbdf8d8e1d14a477b3cd8c4b4e54c1883))
+
+
+### Refactor
+
+* 重构了消息发布接口和抽象类。 ([842fa54](https://github.com/netowls-studio/dep/commit/842fa54964ea77e2539138cee016f35c61a8ffce))
+* 重构消息订阅模块的所有接口。 ([6a783ac](https://github.com/netowls-studio/dep/commit/6a783ac2b1888230fcdacc814377c415694e2d4b))
+* 重命名 IMessagePublisher 为 IDistributor ([59181a2](https://github.com/netowls-studio/dep/commit/59181a2d0eb7107e845de4d16ad4433f83d90b24))
+
+
+### New features
+
+* 为 IDispatcher 接口增加了 LogWriter 属性。 ([7a87381](https://github.com/netowls-studio/dep/commit/7a873812fa6ef38d179f808cc349ad3e8ae82bf7))
+* 新增 DEP 成员信息接口。 ([43faf21](https://github.com/netowls-studio/dep/commit/43faf211d1e3e20a96a6f9aa4671cd8d3fce6c92))
+* 新增成员信息集合。 ([4417505](https://github.com/netowls-studio/dep/commit/441750568b932a6e55d70fcdf7eb95d3f3a4f6e0))
+* 新增订阅分组特性。 ([d5df327](https://github.com/netowls-studio/dep/commit/d5df327fc04fbca9641b16b0a096c2b5592dfbbd))
+* 新增发布消息接口。 ([c90c518](https://github.com/netowls-studio/dep/commit/c90c51835919c8dfa53fe90fa4f514e762e7a5ed))
+* 新增群集管理程序常量类型。 ([57be7ab](https://github.com/netowls-studio/dep/commit/57be7ab604f49e973fbbc4d116ebbcc834578df6))
+* 新增消息调度分发程序基类。 ([b00503f](https://github.com/netowls-studio/dep/commit/b00503fbbbb138bb8a490eef915c2029115a49e2))
+* 新增消息订阅程序基类。 ([25a36f9](https://github.com/netowls-studio/dep/commit/25a36f976d3029c8aa73bffc5eb3be5787d949d2))
+* 新增消息订阅程序集合类。 ([f99cf52](https://github.com/netowls-studio/dep/commit/f99cf52df06f6f7d38af19d210c93e0512298b0b))
+* 新增消息订阅接口。 ([253484a](https://github.com/netowls-studio/dep/commit/253484ab8ec1c0f61d81276df41bfc065fd8239e))
+* 新增消息发布程序基类。 ([b761cfb](https://github.com/netowls-studio/dep/commit/b761cfb7c7a85428b8fb33ffd2aa137dc71b623e))
+* 新增消息分发接口。 ([84e1d16](https://github.com/netowls-studio/dep/commit/84e1d164a67e47c0b9adec6277e14dd159ac83aa))
+* 新增应用角色枚举类型。 ([50f15b7](https://github.com/netowls-studio/dep/commit/50f15b7768925582af596f2e85a6d717644d32d0))
+
 ## [1.0.0-alpha.16](https://github.com/netowls-studio/dep/compare/v1.0.0-alpha.15...v1.0.0-alpha.16) (2020-11-02)
 
 
