@@ -11,6 +11,7 @@
  * ********************************************************************************************
  */
 
+using NetowlsStudio.Dep.Runtime.Logging;
 using System;
 using System.Threading.Tasks;
 
@@ -19,6 +20,11 @@ namespace NetowlsStudio.Dep.Messaging.Handlers
     /// <summary> 定义了发布消息的接口。 </summary>
     public interface IMessagePublisher
     {
+        /// <summary> 记录运行时日志的方法。 </summary>
+        /// <value> 获取 <see cref="ILogWriter" /> 类型的对象实例，用于表示记录运行时日志的方法。 </value>
+        /// <seealso cref="ILogWriter" />
+        ILogWriter LogWriter { get; }
+
         /// <summary> 发布消息。 </summary>
         /// <param name="message"> 实现了 <see cref="IMessage" /> 类型接口的对象实例。 </param>
         /// <seealso cref="IMessage" />
