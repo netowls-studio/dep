@@ -7,7 +7,7 @@
  * Author:             Wang Yucai
  * Git Repository Url: https://github.com/netowls-studio/dep
  * Created Time:       2020/11/3 11:24:19
- * Code:               IMessageSubscriber.cs
+ * Code:               IProcessor.cs
  * ********************************************************************************************
  */
 
@@ -15,10 +15,10 @@ using NetowlsStudio.Dep.Runtime.Logging;
 using System;
 using System.Threading.Tasks;
 
-namespace NetowlsStudio.Dep.Messaging.Handlers
+namespace NetowlsStudio.Dep.Messaging.Handlers.Subscription
 {
-    /// <summary> 定义了订阅消息的接口。 </summary>
-    public interface IMessageSubscriber
+    /// <summary> 定义了处理订阅消息的接口。 </summary>
+    public interface IProcessor
     {
         /// <summary> 记录运行时日志的方法。 </summary>
         /// <value> 获取 <see cref="ILogWriter" /> 类型的对象实例，用于表示记录运行时日志的方法。 </value>

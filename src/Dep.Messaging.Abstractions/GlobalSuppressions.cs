@@ -8,5 +8,5 @@ using System.Diagnostics.CodeAnalysis;
 [assembly: SuppressMessage("Usage", "CA2235:Mark all non-serializable fields", Justification = "<挂起>", Scope = "member", Target = "~P:NetowlsStudio.Dep.Messaging.Header.GroupId")]
 [assembly: SuppressMessage("Usage", "CA2235:Mark all non-serializable fields", Justification = "<挂起>", Scope = "member", Target = "~P:NetowlsStudio.Dep.Messaging.Header.PublishTime")]
 [assembly: SuppressMessage("Usage", "CA2235:Mark all non-serializable fields", Justification = "<挂起>", Scope = "member", Target = "~P:NetowlsStudio.Dep.Messaging.Message.Body")]
-[assembly: SuppressMessage("Microsoft.Design", "UnhandledExceptions:Unhandled exception(s)", Justification = "<挂起>", Scope = "member", Target = "~M:NetowlsStudio.Dep.Messaging.Handlers.MessageSubscriber.Process(NetowlsStudio.Dep.Messaging.IMessage)")]
 [assembly: SuppressMessage("Microsoft.Design", "UnhandledExceptions:Unhandled exception(s)", Justification = "<挂起>", Scope = "member", Target = "~M:NetowlsStudio.Dep.Messaging.Handlers.Distribution.Distributor.Execute(NetowlsStudio.Dep.Messaging.IMessage)")]
+[assembly: SuppressMessage("Microsoft.Design", "UnhandledExceptions:Unhandled exception(s)", Justification = "<挂起>", Scope = "member", Target = "~M:NetowlsStudio.Dep.Messaging.Handlers.Subscription.Processor.Process(NetowlsStudio.Dep.Messaging.IMessage)")]

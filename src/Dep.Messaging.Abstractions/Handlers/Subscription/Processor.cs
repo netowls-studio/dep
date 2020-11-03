@@ -7,7 +7,7 @@
  * Author:             Wang Yucai
  * Git Repository Url: https://github.com/netowls-studio/dep
  * Created Time:       2020/11/3 11:33:13
- * Code:               MessageSubscriber.cs
+ * Code:               Processor.cs
  * ********************************************************************************************
  */
 
@@ -15,16 +15,16 @@ using NetowlsStudio.Dep.Runtime.Logging;
 using System;
 using System.Threading.Tasks;
 
-namespace NetowlsStudio.Dep.Messaging.Handlers
+namespace NetowlsStudio.Dep.Messaging.Handlers.Subscription
 {
-    /// <summary> 提供了订阅消息相关的基本方法。 </summary>
-    /// <seealso cref="IMessageSubscriber" />
-    public abstract class MessageSubscriber : IMessageSubscriber
+    /// <summary> 提供了处理订阅消息相关的基本方法。 </summary>
+    /// <seealso cref="IProcessor" />
+    public abstract class Processor : IProcessor
     {
-        /// <summary> 用于初始化一个 <see cref="MessageSubscriber" /> 类型的对象实例。 </summary>
+        /// <summary> 用于初始化一个 <see cref="Processor" /> 类型的对象实例。 </summary>
         /// <param name="logWriter"> 记录运行时日志的方法。 </param>
         /// <seealso cref="ILogWriter" />
-        protected MessageSubscriber(ILogWriter logWriter)
+        protected Processor(ILogWriter logWriter)
         {
             LogWriter = logWriter;
         }

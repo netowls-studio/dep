@@ -7,28 +7,28 @@
  * Author:             Wang Yucai
  * Git Repository Url: https://github.com/netowls-studio/dep
  * Created Time:       2020/11/3 12:53:06
- * Code:               ISubscriptionDispatcher.cs
+ * Code:               IDispatcher.cs
  * ********************************************************************************************
  */
 
 using System.Threading.Tasks;
 
-namespace NetowlsStudio.Dep.Messaging.Handlers
+namespace NetowlsStudio.Dep.Messaging.Handlers.Subscription
 {
     /// <summary> 定义了调配订阅消息的接口。 </summary>
-    public interface ISubscriptionDispatcher
+    public interface IDispatcher
     {
-        /// <summary> 消息订阅程序集合。 </summary>
-        /// <value> 获取 <see cref="MessageSubscriberCollection" /> 类型的对象实例，用于表示消息订阅程序集合。 </value>
-        /// <seealso cref="MessageSubscriberCollection" />
-        MessageSubscriberCollection Subscribers { get; }
+        /// <summary> 消息处理程序集合。 </summary>
+        /// <value> 获取 <see cref="ProcessorCollection" /> 类型的对象实例，用于表示消息处理程序集合。 </value>
+        /// <seealso cref="ProcessorCollection" />
+        ProcessorCollection Processors { get; }
 
-        /// <summary> 分发消息给指定的消息订阅程序。 </summary>
+        /// <summary> 分发消息给指定的消息处理程序。 </summary>
         /// <param name="message"> 实现了 <see cref="IMessage" /> 类型接口的对象实例。 </param>
         /// <seealso cref="IMessage" />
         void Dispatch(IMessage message);
 
-        /// <summary> (异步的方法) 分发消息给指定的消息订阅程序。 </summary>
+        /// <summary> (异步的方法) 分发消息给指定的消息处理程序。 </summary>
         /// <param name="message"> 实现了 <see cref="IMessage" /> 类型接口的对象实例。 </param>
         /// <returns> <see cref="Task" /> 类型的对象实例。 </returns>
         /// <seealso cref="IMessage" />
