@@ -11,6 +11,7 @@
  * ********************************************************************************************
  */
 
+using NetowlsStudio.Dep.Runtime.Logging;
 using System.Threading.Tasks;
 
 namespace NetowlsStudio.Dep.Messaging.Handlers.Subscription
@@ -18,6 +19,11 @@ namespace NetowlsStudio.Dep.Messaging.Handlers.Subscription
     /// <summary> 定义了调配订阅消息的接口。 </summary>
     public interface IDispatcher
     {
+        /// <summary> 记录运行时日志的程序。 </summary>
+        /// <value> 获取 <see cref="ILogWriter" /> 类型的对象实例，用于表示记录运行时日志的程序。 </value>
+        /// <seealso cref="ILogWriter" />
+        ILogWriter LogWriter { get; }
+
         /// <summary> 消息处理程序集合。 </summary>
         /// <value> 获取 <see cref="ProcessorCollection" /> 类型的对象实例，用于表示消息处理程序集合。 </value>
         /// <seealso cref="ProcessorCollection" />
