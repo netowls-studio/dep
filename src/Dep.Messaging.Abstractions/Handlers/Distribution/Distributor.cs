@@ -79,11 +79,9 @@ namespace NetowlsStudio.Dep.Messaging.Handlers.Distribution
         protected virtual void AfterPublish(IMessage message, Exception error = null)
         {
             if (error is null)
-                LogWriter.WriteInformation(GetType(), "消息分发成功。");
+                LogWriter.WriteInformation(GetType(), "消息分发成功");
             else
-                LogWriter.WriteException(GetType(),
-                                         $"消息分发失败。分发过程中引发了一个 {error.GetType().FullName} 类型的异常：{error.Message}",
-                                         error);
+                LogWriter.WriteException(GetType(), "尝试分发消息", error);
         }
 
         /// <summary> 消息分发之前的动作。 </summary>

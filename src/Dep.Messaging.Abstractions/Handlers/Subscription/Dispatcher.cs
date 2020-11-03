@@ -74,19 +74,7 @@ namespace NetowlsStudio.Dep.Messaging.Handlers.Subscription
                 var groupId = message?.Header.GroupId;
                 if (!string.IsNullOrWhiteSpace(groupId))
                 {
-                    foreach (var item in Dictionary[groupId])
-                    {
-                        try
-                        {
-                            LogWriter.WriteInformation(GetType(), $"尝试将消息交由 {item.GetType().FullName} 处理");
-                            item.Process(message);
-                            AfterProcess(item, message);
-                        }
-                        catch (Exception error)
-                        {
-                            AfterProcess(item, message, error);
-                        }
-                    }
+                    ForeachProcess(message, groupId);
                 }
             }
         }
@@ -106,19 +94,7 @@ namespace NetowlsStudio.Dep.Messaging.Handlers.Subscription
                     var groupId = message?.Header.GroupId;
                     if (!string.IsNullOrWhiteSpace(groupId))
                     {
-                        foreach (var item in Dictionary[groupId])
-                        {
-                            try
-                            {
-                                LogWriter.WriteInformation(GetType(), $"尝试将消息交由 {item.GetType().FullName} 处理");
-                                var error = await item.ProcessAsync(message);
-                                AfterProcess(item, message, error);
-                            }
-                            catch (Exception error)
-                            {
-                                AfterProcess(item, message, error);
-                            }
-                        }
+                        await ForeachProcessAsync(message, groupId);
                     }
                 }
             }
@@ -139,7 +115,7 @@ namespace NetowlsStudio.Dep.Messaging.Handlers.Subscription
             if (error is null)
                 LogWriter.WriteInformation(GetType(), $"{currentProcessor.GetType().FullName} 完成了消息处理");
             else
-                LogWriter.WriteException(GetType(), $"{currentProcessor.GetType().FullName} 处理消息时", error);
+                LogWriter.WriteException(GetType(), $"{currentProcessor.GetType().FullName} 处理消息", error);
         }
 
         /// <summary> 建立索引。 </summary>
@@ -171,5 +147,64 @@ namespace NetowlsStudio.Dep.Messaging.Handlers.Subscription
                 AlreadyIndexed = true;
             }
         }
+
+        /// <summary> 循环处理消息。 </summary>
+        /// <param name="message"> 实现了 <see cref="IMessage" /> 类型接口的对象实例。 </param>
+        /// <param name="groupId"> 消息分组标识。 </param>
+        /// <seealso cref="IMessage" />
+        protected virtual void ForeachProcess(IMessage message, string groupId)
+        {
+            foreach (var item in Dictionary[groupId])
+            {
+                try
+                {
+                    LogWriter.WriteInformation(GetType(), $"尝试将消息交由 {item.GetType().FullName} 处理");
+                    Process(message, item);
+                    AfterProcess(item, message);
+                }
+                catch (Exception error)
+                {
+                    AfterProcess(item, message, error);
+                }
+            }
+        }
+
+        /// <summary> (异步的方法) 循环处理消息。 </summary>
+        /// <param name="message"> 实现了 <see cref="IMessage" /> 类型接口的对象实例。 </param>
+        /// <param name="groupId"> 消息分组标识。 </param>
+        /// <remarks> <see cref="Task" /> 类型的对象实例。 </remarks>
+        /// <seealso cref="IMessage" />
+        /// <seealso cref="Task" />
+        protected virtual async Task ForeachProcessAsync(IMessage message, string groupId)
+        {
+            foreach (var item in Dictionary[groupId])
+            {
+                try
+                {
+                    LogWriter.WriteInformation(GetType(), $"尝试将消息交由 {item.GetType().FullName} 处理");
+                    Exception error = await ProcessAsync(message, item);
+                    AfterProcess(item, message, error);
+                }
+                catch (Exception error)
+                {
+                    AfterProcess(item, message, error);
+                }
+            }
+        }
+
+        /// <summary> 处理消息。 </summary>
+        /// <param name="message"> 实现了 <see cref="IMessage" /> 类型接口的对象实例。 </param>
+        /// <param name="processor"> 实现了 <see cref="IProcessor" /> 类型接口的对象实例。 </param>
+        /// <seealso cref="IMessage" />
+        /// <seealso cref="IProcessor" />
+        protected void Process(IMessage message, IProcessor processor) => processor.Process(message);
+
+        /// <summary> (异步的方法) 处理消息。 </summary>
+        /// <param name="message"> 实现了 <see cref="IMessage" /> 类型接口的对象实例。 </param>
+        /// <param name="processor"> 实现了 <see cref="IProcessor" /> 类型接口的对象实例。 </param>
+        /// <remarks><see cref="Task{TResult}"/> 类型的对象实例。</remarks>
+        /// <seealso cref="IMessage" />
+        /// <seealso cref="IProcessor" />
+        protected async Task<Exception> ProcessAsync(IMessage message, IProcessor processor) => await processor.ProcessAsync(message);
     }
 }

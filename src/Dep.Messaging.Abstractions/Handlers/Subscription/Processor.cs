@@ -79,17 +79,15 @@ namespace NetowlsStudio.Dep.Messaging.Handlers.Subscription
         protected virtual void AfterProcess(IMessage message, Exception error = null)
         {
             if (error is null)
-                LogWriter.WriteInformation(GetType(), "消息处理完成。");
+                LogWriter.WriteInformation(GetType(), "消息处理完成");
             else
-                LogWriter.WriteException(GetType(),
-                                         $"消息处理失败。处理过程中引发了一个 {error.GetType().FullName} 类型的异常：{error.Message}",
-                                         error);
+                LogWriter.WriteException(GetType(), "尝试处理消息", error);
         }
 
         /// <summary> 消息处理之前的动作。 </summary>
         /// <param name="message"> 实现了 <see cref="IMessage" /> 类型接口的对象实例。 </param>
         /// <seealso cref="IMessage" />
-        protected virtual void BeginProcess(IMessage message) => LogWriter.WriteInformation(GetType(), "尝试处理消息。");
+        protected virtual void BeginProcess(IMessage message) => LogWriter.WriteInformation(GetType(), "尝试处理消息");
 
         /// <summary> 处理消息。 </summary>
         /// <param name="message"> 实现了 <see cref="IMessage" /> 类型接口的对象实例。 </param>
